@@ -100,7 +100,6 @@ public class KillEnemy : MonoBehaviour
         if(other.gameObject.tag == "gate" && GateCollider.isActive == true)
         {
             Destroy(gameObject);
-            //Application.Quit();
         }
     }
 }

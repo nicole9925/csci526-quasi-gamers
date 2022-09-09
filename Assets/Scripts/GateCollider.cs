@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GateCollider : MonoBehaviour
 {
-    public static bool isActive = false;
+    public static bool isActive = true;
     private Collider m_ObjectCollider;
     void Start()
     {

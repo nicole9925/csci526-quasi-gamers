@@ -38,11 +38,11 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "key")
-        {
-            GateCollider.isActive = true;
-            GameObject.Find("Key").SetActive(false);
-        }
+        // if(other.gameObject.tag == "key")
+        // {
+        //     GateCollider.isActive = true;
+        //     GameObject.Find("Key").SetActive(false);
+        // }
         if(other.gameObject.tag == "gate" && GateCollider.isActive == true)
         {
             Destroy(gameObject);
