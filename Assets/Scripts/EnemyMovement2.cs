@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyMovement2 : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameOverLabel gameOverLabel;
+
     public float enemySpeed = 0.05f;
     public Rigidbody rb;
     Transform player;
@@ -51,6 +53,8 @@ public class EnemyMovement2 : MonoBehaviour
         if(other.gameObject.tag == "gate" && GateCollider.isActive == true)
         {
             Destroy(gameObject);
+            gameOverLabel.deactivateGameOver();
+            gameOverLabel.showLabel();
             //Application.Quit();
         }
     }
