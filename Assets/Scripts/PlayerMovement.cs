@@ -5,47 +5,64 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float speed = 5f;
-    //public GateCollider gate;
-    // Start is called before the first frame update
+    public Transform orientation;
+
+    [Header("Movement")]
+    public float speed = 15.0f;
+    public float groundDrag = 3.0f;
+    public float airDrag = 1.0f;
+    public float groundInputScale = 1.0f;
+    public float airInputScale = 0.1f;
+    public bool grounded = true;
+    public LayerMask groundLayers = -1;
+    [SerializeField] private float groundedDistance = 0.1f;
+    private Vector3 _moveDirection;
+    
+    private Rigidbody _rb;
+    private InputController _input;
+    
     void Start()
     {
-        
+        _rb = GetComponent<Rigidbody>();
+        _input = GetComponent<InputController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        GroundedCheck();
 
-        Vector3 pos = transform.position;
-
-        pos.x += h * speed * Time.deltaTime;
-        pos.z += v * speed *Time.deltaTime;
-
-        transform.position = pos;
-        
-    }
-
-    void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.tag == "enemy")
+        float inputScale = groundInputScale;
+        if (grounded)
         {
-            Destroy(gameObject);
+            _rb.drag = groundDrag;
+        }
+        else
+        {
+            _rb.drag = airDrag;
+            inputScale = airInputScale;
+        }
+
+        _moveDirection = Vector3.ClampMagnitude(orientation.forward * _input.move.y + orientation.right * _input.move.x, 1.0f);
+        _rb.AddForce(_moveDirection * (speed * inputScale), ForceMode.Force);
+    }
+    
+    private void GroundedCheck()
+    {
+        grounded = false;
+
+        if (Physics.CheckSphere(transform.position, 0.25f, groundLayers))
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnDrawGizmosSelected()
     {
-        // if(other.gameObject.tag == "key")
-        // {
-        //     GateCollider.isActive = true;
-        //     GameObject.Find("Key").SetActive(false);
-        // }
-        if(other.gameObject.tag == "gate" && GateCollider.isActive == true)
-        {
-            Destroy(gameObject);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position + Vector3.down * groundedDistance, 0.25f);
     }
 }
