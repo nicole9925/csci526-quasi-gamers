@@ -11,6 +11,8 @@ public class EnemyMovement : MonoBehaviour
         Following, // 0
         Roaming // 1
     }
+
+    public GameOverLabel gameOverLabel;
     
     public EnemyMovementType currentType;
     public float enemySpeed = 3f;
@@ -67,6 +69,8 @@ public class EnemyMovement : MonoBehaviour
         if(other.gameObject.tag == "gate" && GateCollider.isActive == true)
         {
             Destroy(gameObject);
+            gameOverLabel.deactivateGameOver();
+            gameOverLabel.showLabel();
             //Application.Quit();
         }
     }

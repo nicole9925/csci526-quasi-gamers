@@ -7,8 +7,9 @@ public class KillEnemy : MonoBehaviour
     private float speed = 0f;
     public Rigidbody rb;
     private GameObject platform;
+    public GameOverLabel gameOverLabel;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +101,8 @@ public class KillEnemy : MonoBehaviour
         if(other.gameObject.tag == "gate" && GateCollider.isActive == true)
         {
             Destroy(gameObject);
+            gameOverLabel.deactivateGameOver();
+            gameOverLabel.showLabel();
         }
     }
 }

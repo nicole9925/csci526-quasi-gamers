@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Transform orientation;
+    public Battery battery;
+    public GameOverLabel gameOverLabel;
 
     [Header("Movement")]
     public float speed = 15.0f;
@@ -43,9 +45,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _moveDirection = Vector3.ClampMagnitude(orientation.forward * _input.move.y + orientation.right * _input.move.x, 1.0f);
+
         _rb.AddForce(_moveDirection * (speed * inputScale), ForceMode.Force);
+
+        if (!_moveDirection.Equals(Vector3.zero))
+        {
+            battery.UseEnergy();
+        }
+
     }
-    
+
     private void GroundedCheck()
     {
         grounded = false;
@@ -64,5 +73,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position + Vector3.down * groundedDistance, 0.25f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            gameOverLabel.showLabel();
+        }
     }
 }
