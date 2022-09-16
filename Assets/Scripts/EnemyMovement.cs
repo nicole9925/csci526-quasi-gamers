@@ -24,39 +24,47 @@ public class EnemyMovement : MonoBehaviour
                                                 new Vector3(-1, 0, 0),
                                                 new Vector3(0, 0, 1),
                                                 new Vector3(0, 0, -1),
-                                                // new Vector3(1, 0, -1),
-                                                // new Vector3(1, 0, 1),
-                                                // new Vector3(-1, 0, 1),
-                                                // new Vector3(-1, 0, -1),
+                                                new Vector3(1, 0, -1),
+                                                new Vector3(1, 0, 1),
+                                                new Vector3(-1, 0, 1),
+                                                new Vector3(-1, 0, -1),
     };
+    
+    private Vector3 currentVelocity;
 
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if (currentType == EnemyMovementType.Roaming)
+        {
+            currentVelocity = roamingPatterns[Random.Range(0, roamingPatterns.Length)].normalized;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(hasCollision);
         switch (currentType)
         {
             case EnemyMovementType.Following:
                 player = GameObject.Find("Player");
-                rb.velocity = (player.transform.position - transform.position).normalized * enemySpeed;
+                currentVelocity = (player.transform.position - transform.position).normalized;
                 break;
             case EnemyMovementType.Roaming:
-                // we can do a time base & collision base
-                if (hasCollision || rb.velocity == new Vector3(0, 0, 0)) // maybe if velocity less than some delta value 
+                if (hasCollision)
                 {
-                    int idx = Random.Range(0, roamingPatterns.Length);
-                    rb.velocity = roamingPatterns[idx] * enemySpeed;
+                    currentVelocity = -currentVelocity;
                     hasCollision = false;
                 }
                 break;
         }
+    }
+
+    private void LateUpdate()
+    {
+        rb.velocity = currentVelocity * enemySpeed;
     }
 
     private void OnCollisionEnter(Collision collision)
