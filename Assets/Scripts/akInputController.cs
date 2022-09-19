@@ -17,8 +17,8 @@ public class akInputController : MonoBehaviour
         
         Console.WriteLine("I am here you bet!!");
         count = new AnalyticsManager();
+        StartCoroutine(count.GetRequests("https://analytics-quasi-gamers.wl.r.appspot.com/update/526"));
         MoveInput(value.Get<Vector2>());
-        count.userStartFunction();
     }
 
     public void MoveInput(Vector2 newMoveDirection)
