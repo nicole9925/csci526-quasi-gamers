@@ -55,6 +55,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (transform.position.y < -6)
+        {
+            gameOverLabel.showLabel();
+        }
+    }
+
     private void GroundedCheck()
     {
         grounded = false;
