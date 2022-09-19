@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverLabel : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameOverLabel : MonoBehaviour
     public bool hasWon;
     private Transform loseLabel;
     private Transform winLabel;
+    private Transform restartButton;
     private bool showingLabel = false;
     private int nextScene;
     private int currentScene;
@@ -17,11 +19,14 @@ public class GameOverLabel : MonoBehaviour
     {
         hasWon = false;
 
-        loseLabel = transform.Find("LoseLabel");
-        winLabel = transform.Find("WinLabel");
+        loseLabel = transform.Find("GameOver").Find("LoseLabel");
+        winLabel = transform.Find("GameOver").Find("WinLabel");
+        restartButton = transform.Find("Restart");
+
 
         loseLabel.gameObject.SetActive(false);
         winLabel.gameObject.SetActive(false);
+        restartButton.gameObject.SetActive(false);
 
         nextScene = SceneManager.GetActiveScene().buildIndex + 1; 
         currentScene = SceneManager.GetActiveScene().buildIndex;
@@ -47,7 +52,13 @@ public class GameOverLabel : MonoBehaviour
             PlayerPrefs.SetInt("currentScene", currentScene);
             PlayerPrefs.SetInt("nextScene", nextScene);
             showingLabel = true;
-            Invoke("LoadReplayScene", 3);
+
+            restartButton.gameObject.SetActive(true);
+
+            restartButton.GetComponent<Button>()
+                .onClick.AddListener(LoadReplayScene);
+
+            //Invoke("LoadReplayScene", 3);
         }
     }
 
