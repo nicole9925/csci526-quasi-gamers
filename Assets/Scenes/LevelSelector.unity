@@ -267,11 +267,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2220643376489967949, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_text
-      value: Lvl 3
+      value: Lvl 2
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243232, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Name
-      value: Lvl3
+      value: Lvl2
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243233, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Pivot.x
@@ -514,11 +514,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2220643376489967949, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_text
-      value: Lvl 2
+      value: Lvl 1
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243232, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Name
-      value: Lvl2
+      value: Lvl1
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243233, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Pivot.x
@@ -842,13 +842,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2220643376489967949, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_text
-      value: 'Lvl 5
+      value: 'Lvl 4
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243232, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Name
-      value: Lvl5
+      value: Lvl4
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243233, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Pivot.x
@@ -993,11 +993,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2220643376489967949, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_text
-      value: Lvl 4
+      value: Lvl 3
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243232, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Name
-      value: Lvl4
+      value: Lvl3
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243233, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Pivot.x
@@ -1246,9 +1246,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071320742}
     m_Modifications:
+    - target: {fileID: 2220643376489967949, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
+      propertyPath: m_text
+      value: Lvl 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243232, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Name
-      value: Lvl1
+      value: Lvl0
       objectReference: {fileID: 0}
     - target: {fileID: 2220643377049243233, guid: 39026478886a45141b25f7ed62314fc3, type: 3}
       propertyPath: m_Pivot.x

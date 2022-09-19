@@ -104,7 +104,7 @@ public class NextLevel : MonoBehaviour
 
             case "NextLevelButton":
             int nextScene = PlayerPrefs.GetInt("nextScene");
-            if(nextScene == 4)
+            if(nextScene == 6)
             {
                 if(nextLevelButton != null)
                 {
