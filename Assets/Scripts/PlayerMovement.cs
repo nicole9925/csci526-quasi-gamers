@@ -50,7 +50,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (!_moveDirection.Equals(Vector3.zero))
         {
-            battery.UseEnergy();
+            if (battery)
+            {
+                battery.UseEnergy();
+            }
         }
 
     }
@@ -59,7 +62,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (transform.position.y < -6)
         {
-            gameOverLabel.showLabel();
+            if (gameOverLabel)
+            {
+                gameOverLabel.showLabel();
+            }
         }
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,23 @@ public class ConstrainRotation : MonoBehaviour
     [Header("Constraints")]
     [SerializeField] private Vector3 axisBounds;
 
+    private Vector3 _originalPosition;
+
+    void Start()
+    {
+        _originalPosition = transform.position;
+    }
+
     void FixedUpdate()
     {
         transform.rotation = ClampRotation(transform.rotation, axisBounds);
-        transform.position = Vector3.zero;
     }
-    
+
+    private void LateUpdate()
+    {
+        transform.position = _originalPosition;
+    }
+
     private static Quaternion ClampRotation(Quaternion q, Vector3 bounds)
     {
         q.x /= q.w;
