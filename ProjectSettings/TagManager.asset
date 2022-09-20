@@ -16,10 +16,10 @@ TagManager:
   - Platform
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Wall
+  - Enemy
   - 
   - 
   - 
