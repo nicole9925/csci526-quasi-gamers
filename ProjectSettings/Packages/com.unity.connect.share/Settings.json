@@ -6,7 +6,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/Kai/Downloads/CS526_playable_prototype;;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"C:/Users/Kai/Downloads/csci526-quasi-gamers-build;C:/Users/Kai/Downloads/CS526_playable_prototype;;;;;;;;\"}"
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
