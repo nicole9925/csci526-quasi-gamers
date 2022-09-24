@@ -6,6 +6,9 @@ public class PlatformController : MonoBehaviour
 {
     public float rotationRate = 10.0f;
     public Vector3 rotationBounds = new Vector3(15.0f, 0.0f, 15.0f);
+    public bool canRotate = true;
+    [HideInInspector] public Vector3 rotationToApply;
+    public PlatformController syncController;
 
     private GameObject player;
     private List<GameObject> _objectsInContact;
@@ -17,7 +20,14 @@ public class PlatformController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 totalRotation = Vector3.zero;
+        if (syncController)
+        {
+            transform.Rotate(syncController.rotationToApply);
+            transform.rotation = ClampRotation(transform.rotation, rotationBounds);
+            return;
+        }
+        
+        rotationToApply = Vector3.zero;
         Vector3 platformCentre = GetComponent<Renderer>().bounds.center;
         foreach (GameObject obj in _objectsInContact)
         {
@@ -30,12 +40,16 @@ public class PlatformController : MonoBehaviour
             
             Vector3 objPos = obj.transform.position;
             Vector3 rotToApply = (platformCentre - objPos) * mass;
-            totalRotation += new Vector3(-rotToApply.z, 0.0f, rotToApply.x);
+            rotationToApply += new Vector3(-rotToApply.z, 0.0f, rotToApply.x);
         }
 
-        totalRotation *= rotationRate * Time.fixedDeltaTime;
-        transform.Rotate(totalRotation);
-        transform.rotation = ClampRotation(transform.rotation, rotationBounds);
+        rotationToApply *= rotationRate * Time.fixedDeltaTime;
+
+        if (canRotate)
+        {
+            transform.Rotate(rotationToApply);
+            transform.rotation = ClampRotation(transform.rotation, rotationBounds);
+        }
     }
 
     public void AddToObjectsInContact(GameObject obj)

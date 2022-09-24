@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbbe0303223f3943bf21a31117ae3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRate: 1
+  rotationRate: 1.5
   rotationBounds: {x: 15, y: 0, z: 15}
 --- !u!1001 &11163043861135319
 PrefabInstance:
