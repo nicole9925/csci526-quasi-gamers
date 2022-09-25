@@ -13,6 +13,8 @@ public class NextLevel : MonoBehaviour
    private Transform levelSelectButton;
    private Transform replayButton;
    private Transform nextLevelButton;
+   private AnalyticsManager analytics;
+   private int analyticsData;
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +94,7 @@ public class NextLevel : MonoBehaviour
     public void LoadNextScene()
     {
         var button = EventSystem.current.currentSelectedGameObject.name;
+        analytics = new AnalyticsManager();
         switch(button)
         {
             case "LevelSelectButton":
@@ -99,10 +102,12 @@ public class NextLevel : MonoBehaviour
             break;
 
             case "ReplayButton":
+            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 1));
             SceneManager.LoadScene(PlayerPrefs.GetInt("currentScene"));
             break;
 
             case "NextLevelButton":
+            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("nextScene")-2, 1));
             int nextScene = PlayerPrefs.GetInt("nextScene");
             if(nextScene == 6)
             {

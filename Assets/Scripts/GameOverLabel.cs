@@ -14,6 +14,8 @@ public class GameOverLabel : MonoBehaviour
     private bool showingLabel = false;
     private int nextScene;
     private int currentScene;
+    private AnalyticsManager analytics;
+    private int analyticsData;
 
     void Start()
     {
@@ -30,6 +32,8 @@ public class GameOverLabel : MonoBehaviour
 
         nextScene = SceneManager.GetActiveScene().buildIndex + 1; 
         currentScene = SceneManager.GetActiveScene().buildIndex;
+        analytics = new AnalyticsManager();
+        analyticsData = 0;
     }
 
     public void showLabel()
@@ -41,16 +45,20 @@ public class GameOverLabel : MonoBehaviour
                 loseLabel.gameObject.SetActive(true);
                 PlayerPrefs.SetInt("lose", 1);
                 PlayerPrefs.SetInt("win", 0);
+                analyticsData = 3;
             }
             else
             {
                 winLabel.gameObject.SetActive(true);
                 PlayerPrefs.SetInt("win", 1);
                 PlayerPrefs.SetInt("lose", 0);
+                analyticsData = 2;
             }
             
             PlayerPrefs.SetInt("currentScene", currentScene);
             PlayerPrefs.SetInt("nextScene", nextScene);
+            int level = PlayerPrefs.GetInt("currentScene")-2;
+            StartCoroutine(analytics.GetRequests(level, analyticsData));
             showingLabel = true;
 
             restartButton.gameObject.SetActive(true);

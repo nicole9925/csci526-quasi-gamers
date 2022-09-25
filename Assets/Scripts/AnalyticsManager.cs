@@ -6,26 +6,23 @@ using UnityEngine.Networking;
 
 public class AnalyticsManager
 {
-    private int data = 1;
+    private string uri = "http://127.0.0.1:5000/update/"; //change this to the server
     // Start is called before the first frame update
     void Start()
     {
-        // StartCoroutine(GetRequests("https://analytics-quasi-gamers.wl.r.appspot.com/update/" + data.ToString()));
+        
     }
    
     public void userStartFunction()
     {
-        Console.WriteLine("I am accounted in analytics duhh!!");
-        // StartCoroutine(GetRequests("https://analytics-quasi-gamers.wl.r.appspot.com/update/1"));
-        
+
     }
 
-    //void GetData() => StartCoroutine(GetData_Coroutine());
-
-    public IEnumerator GetRequests(string uri){
-        Console.WriteLine("get started");
+    
+    public IEnumerator GetRequests(int level, int data){
         Debug.Log("Request called");
-        using(UnityWebRequest request = UnityWebRequest.Get(uri))
+        string link = uri + level.ToString() + "/" + data.ToString();
+        using(UnityWebRequest request = UnityWebRequest.Get(link))
         {
             yield return request.SendWebRequest();
             Console.WriteLine("request sent");
