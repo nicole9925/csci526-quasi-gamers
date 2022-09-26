@@ -10,9 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public GameOverLabel gameOverLabel;
 
     [Header("Movement")]
-    public float speed = 15.0f;
-    public float groundDrag = 3.0f;
-    public float airDrag = 1.0f;
+    public float speed = 30.0f;
+    public float groundDrag = 2.0f;
+    public float airDrag = 0.5f;
     public float groundInputScale = 1.0f;
     public float airInputScale = 0.1f;
     public bool grounded = true;

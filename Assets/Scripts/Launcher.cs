@@ -20,6 +20,6 @@ public class Launcher : MonoBehaviour {
 
         Rigidbody _rb = otherObj.GetComponent<Rigidbody>();
 
-        _rb.AddForce(0, _rb.mass*1000, 0);
+        _rb.AddForce(0, _rb.mass*700, 0);
     }
 }

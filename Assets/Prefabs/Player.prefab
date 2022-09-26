@@ -179,8 +179,8 @@ MonoBehaviour:
   battery: {fileID: 0}
   gameOverLabel: {fileID: 0}
   speed: 40
-  groundDrag: 1.5
-  airDrag: 1
+  groundDrag: 0.5
+  airDrag: 0.5
   groundInputScale: 1
   airInputScale: 0.1
   grounded: 1
