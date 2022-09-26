@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class AnalyticsManager
 {
-    private string uri = "http://127.0.0.1:5000/update/"; //change this to the server
+    private string uri = "https://csci526-quasi-gamers-analytics.wl.r.appspot.com/"; //change this to the server
     // Start is called before the first frame update
     void Start()
     {
