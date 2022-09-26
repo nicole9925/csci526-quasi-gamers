@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformTilt : MonoBehaviour
 {
 
-    public float multiplier = 0.15f;
+    public float multiplier = 0.75f;
     private GameObject player;
 
     //public Transform GameObject;
