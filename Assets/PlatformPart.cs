@@ -3,23 +3,26 @@ using UnityEngine;
 public class PlatformPart : MonoBehaviour
 {
     [SerializeField] private bool controllerInParent;
-    
-    private PlatformController _controller;
+    [SerializeField] private PlatformController controller;
 
     void Start()
     {
-        if (controllerInParent)
+        if (!controller)
         {
-            _controller = GetComponentInParent<PlatformController>();
+            if (controllerInParent)
+            {
+                controller = GetComponentInParent<PlatformController>();
+            }
+            else
+            {
+                controller = GetComponent<PlatformController>();
+            }
         }
-        else
-        {
-            _controller = GetComponent<PlatformController>();
-        }
+        
     }
 
     public PlatformController GetController()
     {
-        return _controller;
+        return controller;
     }
 }
