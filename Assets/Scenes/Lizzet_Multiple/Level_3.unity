@@ -33761,6 +33761,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1898146072238081781, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3124790927930285980, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -33768,6 +33772,18 @@ PrefabInstance:
     - target: {fileID: 3124790927930285981, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124790927945513484, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124790927945513485, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124790927945513488, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
+      propertyPath: m_Name
+      value: CubeK
       objectReference: {fileID: 0}
     - target: {fileID: 3124790928218488347, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Enabled
