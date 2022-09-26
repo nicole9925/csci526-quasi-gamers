@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class AnalyticsManager
 {
-    private string uri = "https://csci526-quasi-gamers-analytics.wl.r.appspot.com/"; //change this to the server
+    private string uri = "https://csci526-quasi-gamers-analytics.wl.r.appspot.com/update/"; //change this to the server
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +38,7 @@ public class AnalyticsManager
         WWWForm form = new WWWForm();
         form.AddField("data", "1");
 
-        using (UnityWebRequest request = UnityWebRequest.Post("https://analytics-quasi-gamers.wl.r.appspot.com/update/", form))
+        using (UnityWebRequest request = UnityWebRequest.Post(uri, form))
         {
             yield return request.SendWebRequest();
 
