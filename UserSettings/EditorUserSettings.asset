@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 56570d5604030a090f0a0f7012775d11124e19297b297e69742c4535bbe5636a
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 010107530405505a0c0f557012770649421540287c7e7e637a7b4a30bbe43768
-      flags: 0
-    RecentlyUsedSceneGuid-2:
       value: 0601070300515159090a5c724977594717161b722f2c7e61782c4566bae36139
       flags: 0
-    RecentlyUsedSceneGuid-3:
+    RecentlyUsedSceneGuid-1:
       value: 000855505d065e0a545e5f7645770b16414f4f7f7c297f332e284466e3b5613b
       flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 5554000255000b5e580a0a2716770640134e4b727d7e27332f284431b5b1676b
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 010107530405505a0c0f557012770649421540287c7e7e637a7b4a30bbe43768
+      flags: 0
     RecentlyUsedSceneGuid-4:
-      value: 0655515306070b0f59080e2715775b4115164129752c7f6929704d63b5e16c6e
+      value: 56570d5604030a090f0a0f7012775d11124e19297b297e69742c4535bbe5636a
       flags: 0
     RecentlyUsedSceneGuid-5:
-      value: 5a020200565659095f0b5e774777064146161b2e787a71687f2d4c66b7e3653c
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 5304565056065d0a54595a7548770e1342161d2b7c70256229714b64bbe26239
-      flags: 0
-    RecentlyUsedSceneGuid-7:
-      value: 5b08070004530a095a0858774777094614151b2e2d7a7e31797c4930b4b16c3d
-      flags: 0
-    RecentlyUsedSceneGuid-8:
       value: 5304020503560a585b570a2714770713414f1e78752c25327a2b1f31b7e6376f
       flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 0655515306070b0f59080e2715775b4115164129752c7f6929704d63b5e16c6e
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 5a020200565659095f0b5e774777064146161b2e787a71687f2d4c66b7e3653c
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 5304565056065d0a54595a7548770e1342161d2b7c70256229714b64bbe26239
+      flags: 0
     RecentlyUsedSceneGuid-9:
-      value: 5554000255000b5e580a0a2716770640134e4b727d7e27332f284431b5b1676b
+      value: 5b08070004530a095a0858774777094614151b2e2d7a7e31797c4930b4b16c3d
       flags: 0
   m_VCAutomaticAdd: 1
   m_VCDebugCom: 0
