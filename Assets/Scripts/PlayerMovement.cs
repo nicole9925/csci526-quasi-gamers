@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.y < -6)
+        if (transform.position.y < -10)
         {
             if (gameOverLabel)
             {

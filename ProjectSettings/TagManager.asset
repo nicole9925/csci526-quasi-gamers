@@ -9,6 +9,7 @@ TagManager:
   - gate
   - enemy2
   - platform
+  - target
   layers:
   - Default
   - TransparentFX
