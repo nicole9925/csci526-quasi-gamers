@@ -12,15 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/ReplayOrNextLevel.unity
     guid: e4908b62f98562041ba09f5e27a46db9
   - enabled: 1
-    path: Assets/Scenes/Level_0.unity
-    guid: e03eed8bdd0094f7aac8cd815e858c5a
+    path: Assets/Scenes/Lizzet_Multiple/Level_0.unity
+    guid: ede5c2b44fbee4d1ca9c9d99d9007a86
   - enabled: 1
-    path: Assets/Scenes/Level_1.unity
-    guid: 8f632df7aa9244dedaaa159559455700
+    path: Assets/Scenes/Lizzet_Multiple/Level_1.unity
+    guid: 936f3c022e2574910acd42782d155c1d
   - enabled: 1
-    path: Assets/Scenes/Level_2.unity
-    guid: d199152bb230946f5b9dcc6063b10765
+    path: Assets/Scenes/Lizzet_Multiple/Level_2.unity
+    guid: 05b633419767841c4aea08c2d8679b6a
   - enabled: 1
-    path: Assets/Scenes/Level_3.unity
-    guid: 2dc55013543244b198c844b5ed98aaba
+    path: Assets/Scenes/Lizzet_Multiple/Level_3.unity
+    guid: 893fafc27f457466bbcda28a454c618e
   m_configObjects: {}

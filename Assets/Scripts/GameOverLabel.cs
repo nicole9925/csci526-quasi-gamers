@@ -32,10 +32,15 @@ public class GameOverLabel : MonoBehaviour
         winLabel.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
 
-        menuButton.GetComponent<Button>().onClick.AddListener(LoadReplayScene);
-
         nextScene = SceneManager.GetActiveScene().buildIndex + 1; 
         currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        PlayerPrefs.SetInt("currentScene", currentScene);
+        PlayerPrefs.SetInt("nextScene", nextScene);
+        PlayerPrefs.SetInt("lose", 1);
+        PlayerPrefs.SetInt("win", 0);
+        menuButton.GetComponent<Button>().onClick.AddListener(LoadReplayScene);
+
         analytics = new AnalyticsManager();
         analyticsData = 0;
     }
