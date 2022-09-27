@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayers = -1;
     [SerializeField] private float groundedDistance = 0.1f;
     private Vector3 _moveDirection;
+    private Vector3 _groundNormal;
     
     private Rigidbody _rb;
     private InputController _input;
@@ -45,6 +46,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _moveDirection = Vector3.ClampMagnitude(orientation.forward * _input.move.y + orientation.right * _input.move.x, 1.0f);
+        if (grounded)
+        {
+            _moveDirection = Vector3.ProjectOnPlane(_moveDirection, _groundNormal).normalized * _moveDirection.magnitude;
+        }
 
         _rb.AddForce(_moveDirection * (speed * inputScale), ForceMode.Force);
 
@@ -73,13 +78,11 @@ public class PlayerMovement : MonoBehaviour
     {
         grounded = false;
 
-        if (Physics.CheckSphere(transform.position, 0.25f, groundLayers))
+        grounded = Physics.SphereCast(transform.position, 0.25f, Vector3.down, out RaycastHit hit,
+                                      1.0f, groundLayers, QueryTriggerInteraction.Ignore);
+        if (grounded)
         {
-            grounded = true;
-        }
-        else
-        {
-            grounded = false;
+            _groundNormal = hit.normal;
         }
     }
 
