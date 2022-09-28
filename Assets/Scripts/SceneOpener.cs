@@ -24,22 +24,22 @@ public class SceneOpener : MonoBehaviour
         {
             case "Lvl0":
             StartCoroutine(analytics.GetRequests(0, analyticsData));
-            SceneManager.LoadScene("Scenes/Lizzet_Multiple/Level_0");
+            SceneManager.LoadScene("Scenes/Current_Scenes/Level_0");
             break;
 
             case "Lvl1":
             StartCoroutine(analytics.GetRequests(1, analyticsData));
-            SceneManager.LoadScene("Scenes/Lizzet_Multiple/Level_1");
+            SceneManager.LoadScene("Scenes/Current_Scenes/Level_1");
             break;
 
             case "Lvl2":
             StartCoroutine(analytics.GetRequests(2, analyticsData));
-            SceneManager.LoadScene("Scenes/Lizzet_Multiple/Level_2");
+            SceneManager.LoadScene("Scenes/Current_Scenes/Level_2");
             break;
 
             case "Lvl3":
             StartCoroutine(analytics.GetRequests(3, analyticsData));
-            SceneManager.LoadScene("Scenes/Lizzet_Multiple/Level_3");
+            SceneManager.LoadScene("Scenes/Current_Scenes/Level_3");
             break;
 
             default:
