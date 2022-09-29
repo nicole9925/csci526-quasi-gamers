@@ -16416,7 +16416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402d881497c044ae3aae7fd27876f435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0.05
+  multiplier: 0.1
 --- !u!483693784 &1311053588
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -43594,7 +43594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402d881497c044ae3aae7fd27876f435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0.05
+  multiplier: 0.1
 --- !u!1839735485 &4808307437072669901
 Tilemap:
   m_ObjectHideFlags: 0
@@ -44565,7 +44565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402d881497c044ae3aae7fd27876f435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0.05
+  multiplier: 0.1
 --- !u!483693784 &6798892822701554881
 TilemapRenderer:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -655,6 +655,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &50310879 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1081176725976152630, guid: 5b8d131be12fedf4fb00c897e3c36d8e, type: 3}
+  m_PrefabInstance: {fileID: 1274148755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &55606080
 GameObject:
   m_ObjectHideFlags: 0
@@ -9266,8 +9271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092e1c0946b554c4cafdd27f309e7d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  player: {fileID: 0}
+  agent: {fileID: 973800284}
+  player: {fileID: 50310879}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
