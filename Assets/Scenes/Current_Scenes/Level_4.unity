@@ -12387,7 +12387,7 @@ GameObject:
   - component: {fileID: 792048360}
   - component: {fileID: 792048359}
   m_Layer: 0
-  m_Name: Grid_Ramp (1)
+  m_Name: Swing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
