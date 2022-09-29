@@ -10,6 +10,8 @@ TagManager:
   - enemy2
   - platform
   - target
+  - groundTile
+  - wall
   layers:
   - Default
   - TransparentFX
