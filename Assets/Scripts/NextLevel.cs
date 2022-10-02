@@ -109,7 +109,7 @@ public class NextLevel : MonoBehaviour
             case "NextLevelButton":
             StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("nextScene")-2, 1));
             int nextScene = PlayerPrefs.GetInt("nextScene");
-            if(nextScene == 6)
+            if(nextScene == 8)
             {
                 if(nextLevelButton != null)
                 {

@@ -12,6 +12,7 @@ TagManager:
   - target
   - groundTile
   - wall
+  - powerUp
   layers:
   - Default
   - TransparentFX
