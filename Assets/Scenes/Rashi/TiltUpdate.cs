@@ -5,7 +5,7 @@ using UnityEngine;
 public class TiltUpdate : MonoBehaviour
 {
 
-    public float multiplier = 0.75f;
+    public float multiplier = 0.1f;
     private GameObject player;
     public bool playerOnPlatform = false;
 
