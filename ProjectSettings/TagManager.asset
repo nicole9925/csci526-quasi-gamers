@@ -12,6 +12,8 @@ TagManager:
   - target
   - groundTile
   - wall
+  - powerUp
+  - makeWallsPower
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Player
   - Enemy
   - Wall
-  - 
+  - PowerUp
   - 
   - 
   - 

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Wall_Creation : MonoBehaviour {
 
-    public bool isActive;
+    private bool isActive;
+    private bool wallPowerCollected;
     public Material wallMat;
     public Material justExitedMaterial;
     public Material defaultMaterial;
@@ -12,12 +13,26 @@ public class Wall_Creation : MonoBehaviour {
     private GameObject justExited;
     private GameObject exited;
     public GameObject firstExited;
+    private int wallCount = 0;
+    public Transform instructionLabel;
  
     void Start() {
         exited = firstExited;
         justExited = firstExited;
+
+
+        instructionLabel.gameObject.SetActive(false);
+
     }
 
+    void OnCollisionEnter(Collision col) {
+        if (col.gameObject.tag == "makeWallsPower") {
+            wallPowerCollected = true;
+            col.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            col.gameObject.GetComponent<Collider>().enabled = false;
+            instructionLabel.gameObject.SetActive(true);
+        }
+    }
     void OnCollisionExit(Collision col) {
         // if (col.gameObject.tag == "groundTile") {
         //     col.gameObject.transform.localScale = new Vector3(1, 3, 1);
@@ -45,10 +60,20 @@ public class Wall_Creation : MonoBehaviour {
             justExited.transform.position = justExited.transform.position + new Vector3(0, 0.5f, 0);
             justExited.GetComponent<MeshRenderer>().material = wallMat;
             justExited.tag = "wall";
+            wallCount = wallCount + 1;
         }
     }
 
     void Update() {
+        
+        if (wallCount >= 1) {
+            instructionLabel.gameObject.SetActive(false);
+        }
+
+        if (wallPowerCollected == true) {
+            isActive = true;
+        }
+
         if (isActive == true) {
             if(Input.GetKeyDown(KeyCode.Return)) {
                 CreateWall();

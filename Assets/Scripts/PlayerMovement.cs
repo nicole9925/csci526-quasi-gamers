@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform orientation;
     public Battery battery;
     public GameOverLabel gameOverLabel;
+    public ParticleSystem playerParticle;
 
     [Header("Movement")]
     public float speed = 30.0f;
@@ -28,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _input = GetComponent<InputController>();
+        playerParticle = GetComponentInChildren<ParticleSystem>();
+        if(playerParticle != null)
+        {
+            playerParticle.Stop();
+        }
     }
 
     void FixedUpdate()
@@ -97,6 +103,17 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             gameOverLabel.showLabel();
+        }
+
+        if(playerParticle != null && collision.gameObject.tag == "powerUp")
+        {
+            playerParticle.Play();
+        }
+
+        if(playerParticle != null && collision.gameObject.tag == "wall" && playerParticle.isPlaying == true)
+        {
+            GameObject wall = collision.gameObject;
+            Destroy(wall);
         }
     }
 }
