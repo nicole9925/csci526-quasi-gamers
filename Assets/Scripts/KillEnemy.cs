@@ -25,6 +25,7 @@ public class KillEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        print(collision.gameObject);
         if (collision.gameObject.tag == "target" && killed == false)
         {
             print("killed");
