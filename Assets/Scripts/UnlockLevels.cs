@@ -14,6 +14,7 @@ public class UnlockLevels : MonoBehaviour
     private Button level3;
     private Button level4;
     private Button level5;
+    private Button level6;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class UnlockLevels : MonoBehaviour
         level3 = GameObject.Find("Lvl3").GetComponent<Button>();
         level4 = GameObject.Find("Lvl4").GetComponent<Button>();
         level5 = GameObject.Find("Lvl5").GetComponent<Button>();
+        level6 = GameObject.Find("Lvl6").GetComponent<Button>();
 
         if(enableUnlockLevels == true)
         {
@@ -32,6 +34,7 @@ public class UnlockLevels : MonoBehaviour
             level3.interactable = false;
             level4.interactable = false;
             level5.interactable = false;
+            level6.interactable = false;
         }
     }
 
@@ -108,6 +111,27 @@ public class UnlockLevels : MonoBehaviour
                     level2.interactable = true;
                     level3.interactable = true;
                     level4.interactable = true;
+                }
+            }
+
+            else if(nextScene == 8)
+            {
+                if(win == 1)
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                }
+                else
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
                 }
             }
         }

@@ -52,6 +52,11 @@ public class SceneOpener : MonoBehaviour
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_5");
             break;
 
+            case "Lvl6":
+            StartCoroutine(analytics.GetRequests(6, analyticsData));
+            SceneManager.LoadScene("Scenes/Current_Scenes/Level_6");
+            break;
+
             default:
             break;
         }
