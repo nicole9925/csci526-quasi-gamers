@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4421789, g: 0.49119002, b: 0.57109237, a: 1}
+  m_IndirectSpecularColor: {r: 0.44217888, g: 0.49119002, b: 0.57109237, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26918,7 +26918,6 @@ GameObject:
   - component: {fileID: 699690606}
   - component: {fileID: 699690605}
   - component: {fileID: 699690608}
-  - component: {fileID: 699690609}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -27243,24 +27242,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 699690602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc5eee500b5f54f43a00a21fdb0a3a5e, type: 3}
+  m_Script: {fileID: 11500000, guid: fdbbe0303223f3943bf21a31117ae3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0.1
-  playerOnPlatform: 0
---- !u!65 &699690609
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699690602}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.109768, y: 1.0382781, z: 11.260098}
-  m_Center: {x: 0.022378922, y: 0.019139051, z: -0.4837041}
+  rotationRate: 3
+  rotationBounds: {x: 15, y: 0, z: 15}
+  canRotate: 1
+  rotationToApply: {x: 0, y: 0, z: 0}
+  syncController: {fileID: 0}
 --- !u!1 &700394438
 GameObject:
   m_ObjectHideFlags: 0
@@ -34052,9 +34041,9 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!135 &895030314
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -34126,7 +34115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895030311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.048999, y: 0.67945707, z: -6.48}
+  m_LocalPosition: {x: -7.048999, y: 1.22, z: -6.48}
   m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87231,7 +87220,6 @@ GameObject:
   - component: {fileID: 888734235165926621}
   - component: {fileID: 888734235165926623}
   - component: {fileID: 888734235165926624}
-  - component: {fileID: 888734235165926625}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -87547,24 +87535,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 888734235165926619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc5eee500b5f54f43a00a21fdb0a3a5e, type: 3}
+  m_Script: {fileID: 11500000, guid: fdbbe0303223f3943bf21a31117ae3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0.1
-  playerOnPlatform: 0
---- !u!65 &888734235165926625
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888734235165926619}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.420744, y: 1.0182614, z: 11.136488}
-  m_Center: {x: -0.1081295, y: 0.009130716, z: -0.47353363}
+  rotationRate: 3
+  rotationBounds: {x: 15, y: 0, z: 15}
+  canRotate: 1
+  rotationToApply: {x: 0, y: 0, z: 0}
+  syncController: {fileID: 0}
 --- !u!1 &888734237191647656
 GameObject:
   m_ObjectHideFlags: 0
