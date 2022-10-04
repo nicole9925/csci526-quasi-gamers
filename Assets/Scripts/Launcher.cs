@@ -8,10 +8,11 @@ public class Launcher : MonoBehaviour {
     public float launchForce = 650.0f;
     public Vector3 launchDir = Vector3.up;
     public bool neutralizeVelocity = false;
+    private AnalyticsManager analytics;
 
     // Start is called before the first frame update
     void Start() {
-        
+        analytics = new AnalyticsManager();
     }
 
     // Update is called once per frame
@@ -30,5 +31,6 @@ public class Launcher : MonoBehaviour {
         }
         
         rb.AddForce(launchDir.normalized * rb.mass * launchForce);
+        StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 5));
     }
 }
