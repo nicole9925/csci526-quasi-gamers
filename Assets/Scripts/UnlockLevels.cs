@@ -45,9 +45,16 @@ public class UnlockLevels : MonoBehaviour
         win = PlayerPrefs.GetInt("win");
         if(enableUnlockLevels == true)
         {
-            if(nextScene == 3 && win == 1)
+            if(nextScene == 3)
             {
-                level1.interactable = true;
+                if(win == 1)
+                {
+                    level1.interactable = true;
+                }
+                else
+                {
+                    level0.interactable = true;
+                }
             }
 
             else if(nextScene == 4)

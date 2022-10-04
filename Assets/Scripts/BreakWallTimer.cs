@@ -11,6 +11,8 @@ public class BreakWallTimer : MonoBehaviour
     private ParticleSystem playerParticle;
     private Transform breakWallTimer;
     public GameObject BreakWallTimerText;
+    private Transform loseLabel;
+    private Transform winLabel;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +20,24 @@ public class BreakWallTimer : MonoBehaviour
         player = GameObject.Find("Player");
         playerParticle = player.GetComponentInChildren<ParticleSystem>();
         breakWallTimer = transform.Find("BreakWallTimer").Find("BreakWallTimerText");
+        loseLabel = transform.Find("GameOver").Find("LoseLabel");
+        winLabel = transform.Find("GameOver").Find("WinLabel");
         breakWallTimer.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(playerParticle.isPlaying == true && countDownTime > 0)
+        if(loseLabel.gameObject.active || winLabel.gameObject.active)
+        {
+            if(playerParticle.isPlaying == true)
+            {
+                playerParticle.Stop();
+            }
+            breakWallTimer.gameObject.SetActive(false);
+        }
+
+        else if(playerParticle.isPlaying == true && countDownTime > 0)
         {
             breakWallTimer.gameObject.SetActive(true);
             if(BreakWallTimerText.GetComponent<TextMeshProUGUI>() != null)
