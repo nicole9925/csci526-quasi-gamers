@@ -105,8 +105,9 @@ public class PlayerMovement : MonoBehaviour
             gameOverLabel.showLabel();
         }
 
-        if(playerParticle != null && collision.gameObject.tag == "powerUp")
+        if(playerParticle != null && collision.gameObject.tag == "powerUp" && playerParticle.isPlaying == false)
         {
+            Debug.Log("Power Up!");
             playerParticle.Play();
         }
 
