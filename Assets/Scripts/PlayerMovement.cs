@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     
     private Rigidbody _rb;
     private InputController _input;
+
+    private AnalyticsManager analytics;
     
     void Start()
     {
@@ -34,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
         {
             playerParticle.Stop();
         }
+
+        analytics = new AnalyticsManager();
     }
 
     void FixedUpdate()
@@ -108,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
         if(playerParticle != null && collision.gameObject.tag == "powerUp" && playerParticle.isPlaying == false)
         {
             Debug.Log("Power Up!");
+            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 4));
             playerParticle.Play();
         }
 
