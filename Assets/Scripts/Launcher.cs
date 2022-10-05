@@ -22,6 +22,7 @@ public class Launcher : MonoBehaviour {
 
     //if anything touches it, launch it straight up
     void OnTriggerEnter(Collider collider) {
+        // Debug.Log("collided");
         GameObject otherObj = collider.gameObject;
         Rigidbody rb = otherObj.GetComponent<Rigidbody>();
         

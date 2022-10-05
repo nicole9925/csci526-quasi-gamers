@@ -3,16 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - powerUp
+  - target
+  - enemy
+  - makeWallsPower
+  - groundTile
+  - wall
+  - controllerGrid
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - groundTile
   - Water
   - UI
-  - 
-  - 
+  - Launchpad
+  - Player
   - 
   - 
   - 

@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 538504828}
   - component: {fileID: 538504827}
   - component: {fileID: 538504826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Launchpad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,6 +775,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99fcd3e856d44405a16a2da51f8ddc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  launchForce: 650
+  launchDir: {x: 0, y: 1, z: 0}
+  neutralizeVelocity: 0
 --- !u!135 &538504827
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7005,6 +7008,10 @@ PrefabInstance:
     - target: {fileID: 1081176725976152627, guid: 5b8d131be12fedf4fb00c897e3c36d8e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081176725976152627, guid: 5b8d131be12fedf4fb00c897e3c36d8e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1081176725976152630, guid: 5b8d131be12fedf4fb00c897e3c36d8e, type: 3}
       propertyPath: m_RootOrder
