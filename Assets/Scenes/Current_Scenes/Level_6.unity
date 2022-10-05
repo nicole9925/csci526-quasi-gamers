@@ -6182,7 +6182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5eee500b5f54f43a00a21fdb0a3a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0.1
+  multiplier: 0.05
   playerOnPlatform: 0
 --- !u!1 &682206118
 GameObject:
@@ -12299,7 +12299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc5eee500b5f54f43a00a21fdb0a3a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 0.1
+  multiplier: 0.05
   playerOnPlatform: 0
 --- !u!114 &1222447114
 MonoBehaviour:
