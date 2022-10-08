@@ -56,6 +56,10 @@ public class TiltUpdate : MonoBehaviour
         {
             playerOnPlatform = true;
         }
+        if(collider.gameObject.tag == "enemy")
+        {
+            collider.gameObject.transform.parent = this.transform;
+        }
         // else
         // {
         //     playerOnPlatform = false;
@@ -67,6 +71,10 @@ public class TiltUpdate : MonoBehaviour
         if(collider.gameObject.tag == "Player")
         {
             playerOnPlatform = false;
+        }
+        if(collider.gameObject.tag == "enemy")
+        {
+            collider.gameObject.transform.parent = null;
         }
     }
 }
