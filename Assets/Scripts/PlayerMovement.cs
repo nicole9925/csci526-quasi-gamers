@@ -113,13 +113,27 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Power Up!");
             StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 4));
+            
+            changeWallColor();
             playerParticle.Play();
+            gameObject.GetComponent<Renderer>().material.color = new Color32(10, 233, 203, 100);
         }
 
         if(playerParticle != null && collision.gameObject.tag == "wall" && playerParticle.isPlaying == true)
         {
             GameObject wall = collision.gameObject;
             Destroy(wall);
+        }
+    }
+
+    private void changeWallColor()
+    {
+        Color newWallColor = new Color32(10, 233, 203, 100);
+        Color currentWallColor = new Color(0, 156, 255, 107);
+        GameObject []walls = GameObject.FindGameObjectsWithTag("wall");
+        foreach(GameObject singleWall in walls)
+        {
+            singleWall.GetComponent<Renderer>().material.color = newWallColor;
         }
     }
 }
