@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem playerParticle;
 
     [Header("Movement")]
-    public float speed = 30.0f;
+    public float speed = 20.0f;
     public float groundDrag = 2.0f;
     public float airDrag = 0.5f;
     public float groundInputScale = 1.0f;
