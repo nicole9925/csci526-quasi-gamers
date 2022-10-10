@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class TiltUpdate : MonoBehaviour
     public float multiplier = 0.1f;
     private GameObject player;
     public bool playerOnPlatform = false;
+    public float zRotBounds = -1.0f;
+    public float xRotBounds = -1.0f;
 
     //public Transform GameObject;
     // Start is called before the first frame update
@@ -36,6 +39,16 @@ public class TiltUpdate : MonoBehaviour
 
             float rotX = relPos.x * multiplier;
             float rotZ = relPos.z * multiplier;
+
+            if (xRotBounds >= 0.0f)
+            {
+                rotX = Mathf.Clamp(rotX, -xRotBounds, xRotBounds);
+            }
+
+            if (zRotBounds >= 0.0f)
+            {
+                rotZ = Mathf.Clamp(rotZ, -zRotBounds, zRotBounds);
+            }
 
             // if(
             //     rotX>0 && (currentRot.z <=8 || currentRot.z >=350)
