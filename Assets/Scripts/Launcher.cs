@@ -7,6 +7,7 @@ using UnityEngine;
 public class Launcher : MonoBehaviour {
     public float launchForce = 650.0f;
     public Vector3 launchDir = Vector3.up;
+    public ForceMode forceMode = ForceMode.Force;
     public bool neutralizeVelocity = false;
     public bool disablePlayerMovement = false;
     public float disableMovementDuration = 2.0f;
@@ -33,7 +34,7 @@ public class Launcher : MonoBehaviour {
             rb.velocity = Vector3.zero;
         }
         
-        rb.AddForce(launchDir.normalized * rb.mass * launchForce, ForceMode.Impulse);
+        rb.AddForce(launchDir.normalized * rb.mass * launchForce, forceMode);
         StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 5));
 
         if (disablePlayerMovement)
