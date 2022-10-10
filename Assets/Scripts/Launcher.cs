@@ -8,6 +8,8 @@ public class Launcher : MonoBehaviour {
     public float launchForce = 650.0f;
     public Vector3 launchDir = Vector3.up;
     public bool neutralizeVelocity = false;
+    public bool disablePlayerMovement = false;
+    public float disableMovementDuration = 2.0f;
     private AnalyticsManager analytics;
 
     // Start is called before the first frame update
@@ -31,7 +33,19 @@ public class Launcher : MonoBehaviour {
             rb.velocity = Vector3.zero;
         }
         
-        rb.AddForce(launchDir.normalized * rb.mass * launchForce);
+        rb.AddForce(launchDir.normalized * rb.mass * launchForce, ForceMode.Impulse);
         StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 5));
+
+        if (disablePlayerMovement)
+        {
+            if (otherObj.CompareTag("Player"))
+            {
+                PlayerMovement movementComp = otherObj.GetComponent<PlayerMovement>();
+                if (movementComp)
+                {
+                    movementComp.DisableMovement(disableMovementDuration);
+                }
+            }
+        }
     }
 }

@@ -16,12 +16,16 @@ public class PlayerMovement : MonoBehaviour
     public float airDrag = 0.5f;
     public float groundInputScale = 1.0f;
     public float airInputScale = 0.1f;
+    public float maxDisableTime = 4.0f;
     public bool grounded = true;
     public LayerMask groundLayers = -1;
     [SerializeField] private float groundedDistance = 0.1f;
     private Vector3 _moveDirection;
     private Vector3 _groundNormal;
-    
+    private bool isMovementDisabled = false;
+    private float disableMovementTimer = 0.0f;
+    private float disableMovementTime = 1.0f;
+
     private Rigidbody _rb;
     private InputController _input;
 
@@ -43,6 +47,20 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         GroundedCheck();
+
+        if (isMovementDisabled)
+        {
+            disableMovementTimer += Time.fixedDeltaTime;
+            if (disableMovementTimer >= disableMovementTime)
+            {
+                isMovementDisabled = false;
+                disableMovementTimer = 0.0f;
+            }
+            else
+            {
+                return;
+            }
+        }
 
         float inputScale = groundInputScale;
         if (grounded)
@@ -109,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
             gameOverLabel.showLabel();
         }
 
-        if(playerParticle != null && collision.gameObject.tag == "powerUp" && playerParticle.isPlaying == false)
+        if (playerParticle != null && collision.gameObject.tag == "powerUp" && playerParticle.isPlaying == false)
         {
             Debug.Log("Power Up!");
             StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 4));
@@ -119,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
             gameObject.GetComponent<Renderer>().material.color = new Color32(10, 233, 203, 100);
         }
 
-        if(playerParticle != null && collision.gameObject.tag == "wall" && playerParticle.isPlaying == true)
+        if (playerParticle != null && collision.gameObject.tag == "wall" && playerParticle.isPlaying == true)
         {
             GameObject wall = collision.gameObject;
             Destroy(wall);
@@ -135,5 +153,16 @@ public class PlayerMovement : MonoBehaviour
         {
             singleWall.GetComponent<Renderer>().material.color = newWallColor;
         }
+    }
+
+    public void DisableMovement(float duration)
+    {
+        if (duration >= maxDisableTime)
+        {
+            duration = maxDisableTime;
+        }
+
+        isMovementDisabled = true;
+        disableMovementTime = duration;
     }
 }
