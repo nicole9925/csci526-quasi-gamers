@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1241,7 +1241,7 @@ GameObject:
   - component: {fileID: 533452436}
   - component: {fileID: 533452435}
   - component: {fileID: 533452434}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeN
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 582970880}
   - component: {fileID: 582970879}
   - component: {fileID: 582970878}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeP
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1591,7 +1591,7 @@ GameObject:
   - component: {fileID: 605280750}
   - component: {fileID: 605280749}
   - component: {fileID: 605280748}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeO
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1628,7 +1628,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &605280749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1819,7 +1819,7 @@ GameObject:
   - component: {fileID: 812607503}
   - component: {fileID: 812607502}
   - component: {fileID: 812607501}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeN
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1856,7 +1856,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &812607502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1933,7 +1933,7 @@ GameObject:
   - component: {fileID: 862487487}
   - component: {fileID: 862487486}
   - component: {fileID: 862487485}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeM
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -1970,7 +1970,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &862487486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2047,7 +2047,7 @@ GameObject:
   - component: {fileID: 1012083976}
   - component: {fileID: 1012083975}
   - component: {fileID: 1012083974}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeQ
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -2084,7 +2084,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1012083975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7262,7 +7262,7 @@ GameObject:
   - component: {fileID: 1421080225}
   - component: {fileID: 1421080224}
   - component: {fileID: 1421080223}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeO
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -7741,7 +7741,7 @@ GameObject:
   - component: {fileID: 1565836165}
   - component: {fileID: 1565836164}
   - component: {fileID: 1565836163}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeQ
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -8096,7 +8096,7 @@ GameObject:
   - component: {fileID: 1647248447}
   - component: {fileID: 1647248446}
   - component: {fileID: 1647248445}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeP
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -8133,7 +8133,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &1647248446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13022,7 +13022,7 @@ GameObject:
   - component: {fileID: 1741605829}
   - component: {fileID: 1741605828}
   - component: {fileID: 1741605827}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeR
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -13630,7 +13630,7 @@ GameObject:
   - component: {fileID: 1935155333}
   - component: {fileID: 1935155332}
   - component: {fileID: 1935155331}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeM
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -14342,7 +14342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124790928612434195, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790928612434195, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_TagString
@@ -14510,11 +14510,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124790928843693842, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790928843693842, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_TagString
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124790928843693842, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790928861882061, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Material
@@ -14638,7 +14642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929225617400, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929225617400, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_TagString
@@ -14666,7 +14670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929287163622, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929287163622, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_TagString
@@ -14762,7 +14766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929573141250, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929573141250, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_TagString
@@ -14790,7 +14794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929615331297, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929615331297, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_TagString
@@ -14878,7 +14882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929866069183, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790929866069183, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_TagString
@@ -14943,7 +14947,7 @@ GameObject:
   - component: {fileID: 2053614216}
   - component: {fileID: 2053614215}
   - component: {fileID: 2053614214}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CubeR
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -14980,7 +14984,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &2053614215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15057,7 +15061,7 @@ GameObject:
   - component: {fileID: 2109881009}
   - component: {fileID: 2109881008}
   - component: {fileID: 2109881007}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: CubeR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
