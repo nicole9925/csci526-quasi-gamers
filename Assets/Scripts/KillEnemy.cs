@@ -8,13 +8,14 @@ public class KillEnemy : MonoBehaviour
     private bool killed = false;
     GameOverLabel gameOverLabel;
     private Vector3 spawnPos;
-
+    private AnalyticsManager analytics;
 
     // Start is called before the first frame update
     void Start()
     {
         gameOverLabel = GameObject.Find("UI Canvas").gameObject.GetComponent<GameOverLabel>();
         spawnPos = transform.position;
+        analytics = new AnalyticsManager();
     }
 
     void Update()
@@ -27,7 +28,9 @@ public class KillEnemy : MonoBehaviour
     }
 
     void ResetEnemy()
-    {
+    {   
+        Debug.Log("Enemy respawned!");
+        StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 6));
         transform.position = spawnPos;
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb)

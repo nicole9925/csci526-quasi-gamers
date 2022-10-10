@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rb;
     private InputController _input;
 
+    private Vector3 lastPosition;
+    private float totalDistance;
     private AnalyticsManager analytics;
     
     void Start()
@@ -40,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         {
             playerParticle.Stop();
         }
-
+        lastPosition = transform.position;
         analytics = new AnalyticsManager();
     }
 
@@ -92,7 +94,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Update()
-    {
+    {   
+        float distance = Vector3.Distance(lastPosition, transform.position);
+        totalDistance += distance;
+        PlayerPrefs.SetFloat("distance", totalDistance);
+        lastPosition = transform.position;
         if (transform.position.y < -10)
         {
             if (gameOverLabel)
