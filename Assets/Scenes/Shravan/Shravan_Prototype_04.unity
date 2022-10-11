@@ -4194,7 +4194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bdd73cdef454373a5a5ca206831a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killCount: 2
+  killCount: 0
   gameOverLabel: {fileID: 1779685517}
 --- !u!4 &155118981
 Transform:
