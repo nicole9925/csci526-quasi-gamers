@@ -66,12 +66,14 @@ public class GameOverLabel : MonoBehaviour
             
             PlayerPrefs.SetInt("currentScene", currentScene);
             PlayerPrefs.SetInt("nextScene", nextScene);
+
             int level = PlayerPrefs.GetInt("currentScene")-2;
             StartCoroutine(analytics.GetRequests(level, analyticsData));
+
             float dist = PlayerPrefs.GetFloat("distance"); 
-            //Debug.Log("distance!" + dist);
-            StartCoroutine(analytics.DistGetRequests(level, 7, dist));
+            StartCoroutine(analytics.DistGetRequests(level, dist));
             PlayerPrefs.SetFloat("distance", 0);
+            
             showingLabel = true;
 
             restartButton.gameObject.SetActive(true);

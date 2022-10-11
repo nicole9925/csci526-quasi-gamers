@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 public class AnalyticsManager
 {
     private string uri = "https://csci526-quasi-gamers.wl.r.appspot.com/update/"; //change this to the server
+    private string distUri = "https://csci526-quasi-gamers.wl.r.appspot.com/distance/";
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,6 @@ public class AnalyticsManager
     4 - wall break power up
     5 - launchpad used
     6 - respawn enemy
-    7 - distance traveled
     */
     public IEnumerator GetRequests(int level, int data){
         Debug.Log("Request called");
@@ -43,9 +43,9 @@ public class AnalyticsManager
         }
     }
 
-    public IEnumerator DistGetRequests(int level, int data, float dist){
-        Debug.Log("Request called");
-        string link = uri + level.ToString() + "/" + data.ToString() + "/" + dist.ToString();
+    public IEnumerator DistGetRequests(int level, float dist){
+        Debug.Log("dist called");
+        string link = distUri + level.ToString() + "/" + dist.ToString();
         using(UnityWebRequest request = UnityWebRequest.Get(link))
         {
             yield return request.SendWebRequest();
