@@ -64,9 +64,9 @@ MonoBehaviour:
   triggerVelocityThreshold: -2
   triggerActivateTime: 0.5
   triggerResetTime: 2
-  cannonForce: 5
+  cannonForce: 15
   maxTriggerDistance: 5
-  maxCannonDistance: 7.5
+  maxCannonDistance: 3.5
 --- !u!1 &1048130710435183589
 GameObject:
   m_ObjectHideFlags: 0

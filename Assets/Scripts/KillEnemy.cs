@@ -45,7 +45,11 @@ public class KillEnemy : MonoBehaviour
         if (collision.gameObject.tag == "target" && killed == false)
         {
             print("killed");
-            GetComponentInParent<CountKillRate>().addKill();
+            CountKillRate countKillRate = GetComponentInParent<CountKillRate>();
+            if (countKillRate)
+            {
+                countKillRate.addKill();
+            }
             killed = true;
         }
     }

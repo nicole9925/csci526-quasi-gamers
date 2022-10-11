@@ -2947,6 +2947,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4764243547992786018, guid: 4d6f19c924a5fa14c946806bf91f5010, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.008249
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764243547992786018, guid: 4d6f19c924a5fa14c946806bf91f5010, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.008262
+      objectReference: {fileID: 0}
     - target: {fileID: 4764243548623007016, guid: 4d6f19c924a5fa14c946806bf91f5010, type: 3}
       propertyPath: m_Name
       value: TiledHole
@@ -4186,7 +4194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bdd73cdef454373a5a5ca206831a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killCount: 0
+  killCount: 2
   gameOverLabel: {fileID: 1779685517}
 --- !u!4 &155118981
 Transform:
@@ -12930,6 +12938,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4764243547992786018, guid: 4d6f19c924a5fa14c946806bf91f5010, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.008755
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764243547992786018, guid: 4d6f19c924a5fa14c946806bf91f5010, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.009753
+      objectReference: {fileID: 0}
     - target: {fileID: 4764243548623007016, guid: 4d6f19c924a5fa14c946806bf91f5010, type: 3}
       propertyPath: m_Name
       value: TiledHole (1)
@@ -54326,14 +54342,6 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7426965845166408522, guid: a4045bb1f0c512c4ca5a80c82d23f4a1, type: 3}
-      propertyPath: cannonForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7426965845166408522, guid: a4045bb1f0c512c4ca5a80c82d23f4a1, type: 3}
-      propertyPath: maxCannonDistance
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 9022503728214070770, guid: a4045bb1f0c512c4ca5a80c82d23f4a1, type: 3}
       propertyPath: m_Name
       value: Cannon
@@ -55731,14 +55739,6 @@ PrefabInstance:
     - target: {fileID: 6169461225157234513, guid: a4045bb1f0c512c4ca5a80c82d23f4a1, type: 3}
       propertyPath: m_CollisionDetection
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7426965845166408522, guid: a4045bb1f0c512c4ca5a80c82d23f4a1, type: 3}
-      propertyPath: cannonForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7426965845166408522, guid: a4045bb1f0c512c4ca5a80c82d23f4a1, type: 3}
-      propertyPath: maxCannonDistance
-      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 9022503728214070770, guid: a4045bb1f0c512c4ca5a80c82d23f4a1, type: 3}
       propertyPath: m_Name
