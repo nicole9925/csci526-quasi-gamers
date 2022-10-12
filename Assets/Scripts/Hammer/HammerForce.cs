@@ -11,8 +11,7 @@ public class HammerForce : MonoBehaviour
 
         if (rb)
         {
-            Vector3 impulse = collision.impulse;
-            rb.AddForce(impulse * impulseScale, ForceMode.Force);
+            rb.AddForce(transform.forward * collision.impulse.magnitude * impulseScale, ForceMode.Force);
         }
     }
 }
