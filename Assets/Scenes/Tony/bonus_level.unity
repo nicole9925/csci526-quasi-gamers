@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16771,7 +16771,6 @@ GameObject:
   - component: {fileID: 895030315}
   - component: {fileID: 895030314}
   - component: {fileID: 895030313}
-  - component: {fileID: 895030312}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: enemy
@@ -16779,18 +16778,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &895030312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 895030311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca38ea8723ef8413b923f17016fd45fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &895030313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35538,7 +35525,6 @@ GameObject:
   - component: {fileID: 2015496964}
   - component: {fileID: 2015496963}
   - component: {fileID: 2015496962}
-  - component: {fileID: 2015496967}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: enemy
@@ -35640,18 +35626,6 @@ Transform:
   m_Father: {fileID: 155118981}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2015496967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015496961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca38ea8723ef8413b923f17016fd45fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2035673279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8340941480516101918, guid: 02d9de17719104c9393737aea3c07b28, type: 3}
@@ -36485,7 +36459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1081176725976152619, guid: 5b8d131be12fedf4fb00c897e3c36d8e, type: 3}
       propertyPath: m_DefaultActionMap
-      value: d48a0fa2-62f5-49b6-a855-336b3a57913f
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1081176725976152626, guid: 5b8d131be12fedf4fb00c897e3c36d8e, type: 3}
       propertyPath: m_Drag
