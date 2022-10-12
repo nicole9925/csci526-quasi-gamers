@@ -136,8 +136,9 @@ public class PlayerMovement : MonoBehaviour
         if (playerParticle != null && collision.gameObject.tag == "powerUp" && playerParticle.isPlaying == false)
         {
             Debug.Log("Power Up!");
-            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 4));
-            
+            #if UNITY_WEBGL
+                StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 4));
+            #endif
             changeWallColor();
             playerParticle.Play();
             gameObject.GetComponent<Renderer>().material.color = new Color32(10, 233, 203, 100);

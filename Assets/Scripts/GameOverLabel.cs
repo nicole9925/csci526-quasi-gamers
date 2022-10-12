@@ -68,10 +68,12 @@ public class GameOverLabel : MonoBehaviour
             PlayerPrefs.SetInt("nextScene", nextScene);
 
             int level = PlayerPrefs.GetInt("currentScene")-2;
-            StartCoroutine(analytics.GetRequests(level, analyticsData));
-
-            float dist = PlayerPrefs.GetFloat("distance"); 
-            StartCoroutine(analytics.DistGetRequests(level, dist));
+            float dist = PlayerPrefs.GetFloat("distance");
+            
+            #if UNITY_WEBGL
+                StartCoroutine(analytics.GetRequests(level, analyticsData));
+                StartCoroutine(analytics.DistGetRequests(level, dist));
+            #endif
             PlayerPrefs.SetFloat("distance", 0);
             
             showingLabel = true;

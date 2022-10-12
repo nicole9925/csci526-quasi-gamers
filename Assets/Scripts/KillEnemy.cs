@@ -29,8 +29,9 @@ public class KillEnemy : MonoBehaviour
 
     void ResetEnemy()
     {   
-        Debug.Log("Enemy respawned!");
-        StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 6));
+        #if UNITY_WEBGL
+            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 6));
+        #endif
         transform.position = spawnPos;
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb)

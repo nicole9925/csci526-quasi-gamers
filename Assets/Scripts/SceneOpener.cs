@@ -23,42 +23,49 @@ public class SceneOpener : MonoBehaviour
         switch(button)
         {
             case "Lvl0":
-            StartCoroutine(analytics.GetRequests(0, analyticsData));
+            sendAnalytics(0, analyticsData);
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_0");
             break;
 
             case "Lvl1":
-            StartCoroutine(analytics.GetRequests(1, analyticsData));
+            sendAnalytics(1, analyticsData);
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_1");
             break;
 
             case "Lvl2":
-            StartCoroutine(analytics.GetRequests(2, analyticsData));
+            sendAnalytics(2, analyticsData);
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_2");
             break;
 
             case "Lvl3":
-            StartCoroutine(analytics.GetRequests(3, analyticsData));
+            sendAnalytics(3, analyticsData);
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_3");
             break;
 
             case "Lvl4":
-            StartCoroutine(analytics.GetRequests(4, analyticsData));
+            sendAnalytics(4, analyticsData);
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_4");
             break;
 
             case "Lvl5":
-            StartCoroutine(analytics.GetRequests(5, analyticsData));
+            sendAnalytics(5, analyticsData);
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_5");
             break;
 
             case "Lvl6":
-            StartCoroutine(analytics.GetRequests(6, analyticsData));
+            sendAnalytics(6, analyticsData);
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_6");
             break;
 
             default:
             break;
         }
+    }
+
+    private void sendAnalytics(int level, int data)
+    {
+        #if UNITY_WEBGL
+            StartCoroutine(analytics.GetRequests(level, data));
+        #endif   
     }
 }
