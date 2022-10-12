@@ -25,14 +25,21 @@ public class Wall_Creation : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter(Collision col) {
-        if (col.gameObject.tag == "makeWallsPower") {
-            wallPowerCollected = true;
-            col.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            col.gameObject.GetComponent<Collider>().enabled = false;
-            instructionLabel.gameObject.SetActive(true);
-        }
+    //void OnCollisionEnter(Collision col) {
+    //    if (col.gameObject.tag == "makeWallsPower") {
+    //        wallPowerCollected = true;
+    //        col.gameObject.GetComponent<MeshRenderer>().enabled = false;
+    //        col.gameObject.GetComponent<Collider>().enabled = false;
+    //        instructionLabel.gameObject.SetActive(true);
+    //    }
+    //}
+
+    public void setPowerUpActive()
+    {
+        wallPowerCollected = true;
+        instructionLabel.gameObject.SetActive(true);
     }
+
     void OnCollisionExit(Collision col) {
         // if (col.gameObject.tag == "groundTile") {
         //     col.gameObject.transform.localScale = new Vector3(1, 3, 1);
