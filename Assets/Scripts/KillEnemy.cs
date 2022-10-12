@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class KillEnemy : MonoBehaviour
 {
-    private bool killed = false;
+    public bool killed = false;
     GameOverLabel gameOverLabel;
     private Vector3 spawnPos;
     private AnalyticsManager analytics;
@@ -27,7 +27,7 @@ public class KillEnemy : MonoBehaviour
         }
     }
 
-    void ResetEnemy()
+    public void ResetEnemy()
     {   
         #if UNITY_WEBGL
             StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 6));
