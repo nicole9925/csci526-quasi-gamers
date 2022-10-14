@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlatformController : MonoBehaviour
 {
     public float rotationRate = 10.0f;
+    public float relativeRotationScale = 0.01f;
     public Vector3 rotationBounds = new Vector3(15.0f, 0.0f, 15.0f);
     public bool canRotate = true;
+    public bool positionRelativeRotation = false;
     [HideInInspector] public Vector3 rotationToApply;
     public PlatformController syncController;
 
@@ -43,12 +45,28 @@ public class PlatformController : MonoBehaviour
             rotationToApply += new Vector3(-rotToApply.z, 0.0f, rotToApply.x);
         }
 
-        rotationToApply *= rotationRate * Time.fixedDeltaTime;
+        if (positionRelativeRotation)
+        {
+            rotationToApply *= relativeRotationScale;
+        }
+        else
+        {
+            rotationToApply *= rotationRate * Time.fixedDeltaTime;
+        }
 
         if (canRotate)
         {
-            transform.Rotate(rotationToApply);
-            transform.rotation = ClampRotation(transform.rotation, rotationBounds);
+            if (positionRelativeRotation)
+            {
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(rotationToApply),
+                                                              rotationRate * Time.fixedDeltaTime);
+                transform.rotation = ClampRotation(transform.rotation, rotationBounds);
+            }
+            else
+            {
+                transform.Rotate(rotationToApply);
+                transform.rotation = ClampRotation(transform.rotation, rotationBounds);
+            }
         }
     }
 
@@ -56,7 +74,6 @@ public class PlatformController : MonoBehaviour
     {
         if (!_objectsInContact.Contains(obj))
         {
-            Debug.Log("Added object: " + obj.name);
             _objectsInContact.Add(obj);
         }
     }
@@ -65,7 +82,6 @@ public class PlatformController : MonoBehaviour
     {
         if (_objectsInContact.Contains(obj))
         {
-            Debug.Log("Removed object: " + obj.name);
             _objectsInContact.Remove(obj);
         }
     }
