@@ -10,7 +10,9 @@ public class PlatformController : MonoBehaviour
     public bool canRotate = true;
     public bool positionRelativeRotation = false;
     [HideInInspector] public Vector3 rotationToApply;
+    public float deadzoneRadius = 0.0f;
     public PlatformController syncController;
+    [HideInInspector] public bool playerInContact = true;
 
     private GameObject player;
     private List<GameObject> _objectsInContact;
@@ -28,11 +30,17 @@ public class PlatformController : MonoBehaviour
             transform.rotation = ClampRotation(transform.rotation, rotationBounds);
             return;
         }
-        
+
+        playerInContact = false;
         rotationToApply = Vector3.zero;
         Vector3 platformCentre = GetComponent<Renderer>().bounds.center;
         foreach (GameObject obj in _objectsInContact)
         {
+            if (obj.CompareTag("Player"))
+            {
+                playerInContact = true;
+            }
+            
             float mass = 1.0f;
             Rigidbody rb = obj.GetComponent<Rigidbody>();
             if (rb)
@@ -41,8 +49,16 @@ public class PlatformController : MonoBehaviour
             }
             
             Vector3 objPos = obj.transform.position;
-            Vector3 rotToApply = (platformCentre - objPos) * mass;
-            rotationToApply += new Vector3(-rotToApply.z, 0.0f, rotToApply.x);
+
+            if ((platformCentre - objPos).magnitude <= deadzoneRadius)
+            {
+                continue;
+            }
+            else
+            {
+                Vector3 rotToApply = (platformCentre - objPos) * mass;
+                rotationToApply += new Vector3(-rotToApply.z, 0.0f, rotToApply.x);
+            }
         }
 
         if (positionRelativeRotation)
