@@ -7649,6 +7649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca38ea8723ef8413b923f17016fd45fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: 0
 --- !u!54 &1548279628
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7890,6 +7891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca38ea8723ef8413b923f17016fd45fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killed: 0
 --- !u!54 &1608194889
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13956,6 +13958,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3124790927846870428, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3124790927874652251, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -13974,7 +13980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3124790927874652255, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124790927874652255, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_TagString
@@ -14908,6 +14914,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7046398350081506630, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9013964691324628368, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -15061,7 +15071,7 @@ GameObject:
   - component: {fileID: 2109881009}
   - component: {fileID: 2109881008}
   - component: {fileID: 2109881007}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
