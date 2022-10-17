@@ -58,7 +58,7 @@ public class SceneOpener : MonoBehaviour
             break;
 
             case "Lvl7":
-            sendAnalytics(6, analyticsData);
+            sendAnalytics(7, analyticsData);
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_7");
             break;
 
