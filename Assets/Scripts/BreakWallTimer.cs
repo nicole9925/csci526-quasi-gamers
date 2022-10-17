@@ -6,17 +6,19 @@ using TMPro;
 
 public class BreakWallTimer : MonoBehaviour
 {
-    private float countDownTime;
+    public float countDownTime;
     private GameObject player;
     private ParticleSystem playerParticle;
     private Transform breakWallTimer;
     public GameObject BreakWallTimerText;
     private Transform loseLabel;
     private Transform winLabel;
+    private float prevTime;
     // Start is called before the first frame update
     void Start()
     {
-        countDownTime = 11f;
+        //countDownTime = 11f;
+        prevTime = countDownTime;
         player = GameObject.Find("Player");
         playerParticle = player.GetComponentInChildren<ParticleSystem>();
         breakWallTimer = transform.Find("BreakWallTimer").Find("BreakWallTimerText");
@@ -70,7 +72,7 @@ public class BreakWallTimer : MonoBehaviour
 
         if(playerParticle.isPlaying == false)
         {
-            countDownTime = 11f;
+            countDownTime = prevTime;
         }
     }
 

@@ -7248,6 +7248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349a243512f4b734d93a76eee33de58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countDownTime: 11
   BreakWallTimerText: {fileID: 1777260179}
 --- !u!1 &1421080221
 GameObject:
