@@ -178,15 +178,17 @@ MonoBehaviour:
   orientation: {fileID: 1081176726997985833}
   battery: {fileID: 0}
   gameOverLabel: {fileID: 0}
+  playerParticle: {fileID: 0}
   speed: 40
   groundDrag: 0.5
   airDrag: 0.5
   groundInputScale: 1
   airInputScale: 0.1
+  maxDisableTime: 4
   grounded: 1
   groundLayers:
     serializedVersion: 2
-    m_Bits: 393
+    m_Bits: 265
   groundedDistance: 0.5
 --- !u!114 &8133353206586990677
 MonoBehaviour:

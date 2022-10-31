@@ -3786,10 +3786,6 @@ PrefabInstance:
       propertyPath: gameOverLabel
       value: 
       objectReference: {fileID: 1779685517}
-    - target: {fileID: 1081176725976152617, guid: 5b8d131be12fedf4fb00c897e3c36d8e, type: 3}
-      propertyPath: groundLayers.m_Bits
-      value: 392
-      objectReference: {fileID: 0}
     - target: {fileID: 1081176725976152626, guid: 5b8d131be12fedf4fb00c897e3c36d8e, type: 3}
       propertyPath: m_Drag
       value: 3
@@ -6431,7 +6427,9 @@ MonoBehaviour:
   canRotate: 1
   positionRelativeRotation: 0
   rotationToApply: {x: 0, y: 0, z: 0}
+  deadzoneRadius: 0
   syncController: {fileID: 0}
+  playerInContact: 1
 --- !u!1001 &5681865584217092559
 PrefabInstance:
   m_ObjectHideFlags: 0

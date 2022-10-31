@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
     {
         grounded = false;
 
-        grounded = Physics.SphereCast(transform.position, 0.25f, Vector3.down, out RaycastHit hit,
+        grounded = Physics.SphereCast(transform.position, 0.1f, Vector3.down, out RaycastHit hit,
                                       1.0f, groundLayers, QueryTriggerInteraction.Ignore);
         if (grounded)
         {
