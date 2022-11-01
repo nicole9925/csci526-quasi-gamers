@@ -240,7 +240,9 @@ MonoBehaviour:
   canRotate: 1
   positionRelativeRotation: 1
   rotationToApply: {x: 0, y: 0, z: 0}
+  deadzoneRadius: 0
   syncController: {fileID: 0}
+  playerInContact: 1
 --- !u!1 &2872238446893279494
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +305,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -402,7 +404,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -466,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impulseScale: 270
+  platformController: {fileID: 0}
 --- !u!1 &6816185496150668040
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +532,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -644,7 +647,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -708,6 +711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impulseScale: 270
+  platformController: {fileID: 0}
 --- !u!1001 &888734235275861859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -979,6 +983,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1173,6 +1181,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1301,6 +1313,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1363,6 +1379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1491,6 +1511,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1553,6 +1577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1615,6 +1643,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1941,6 +1973,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2003,6 +2039,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2065,6 +2105,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2193,6 +2237,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2255,6 +2303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2449,6 +2501,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2511,6 +2567,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2639,6 +2699,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2701,6 +2765,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2763,6 +2831,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2825,6 +2897,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -2887,6 +2963,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -3015,6 +3095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734236387467111}
     m_Modifications:
+    - target: {fileID: 8226133011189478392, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f79bdfb36801422e81a559a2caaf5bf, type: 2}
     - target: {fileID: 8226133011189478397, guid: 735cc29ce6a1b064193971ed137da7c6, type: 3}
       propertyPath: m_Name
       value: Tile
