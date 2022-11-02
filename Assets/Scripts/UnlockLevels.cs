@@ -60,7 +60,7 @@ public class UnlockLevels : MonoBehaviour
         win = PlayerPrefs.GetInt("win");
         if(enableUnlockLevels == true)
         {
-            if(nextScene == 3)
+            if(nextScene == 4)
             {
                 if(win == 1)
                 {
@@ -72,7 +72,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 4)
+            else if(nextScene == 5)
             {
                 if(win == 1)
                 {
@@ -85,7 +85,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
             
-            else if(nextScene == 5)
+            else if(nextScene == 6)
             {
                 if(win == 1)
                 {
@@ -100,7 +100,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 6)
+            else if(nextScene == 7)
             {
                 if(win == 1)
                 {
@@ -117,7 +117,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 7)
+            else if(nextScene == 8)
             {
                 if(win == 1)
                 {
@@ -136,7 +136,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 8)
+            else if(nextScene == 9)
             {
                 if(win == 1)
                 {
@@ -157,7 +157,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 9)
+            else if(nextScene == 10)
             {
                 if(win == 1)
                 {
@@ -180,7 +180,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 10)
+            else if(nextScene == 11)
             {
                 if(win == 1)
                 {
@@ -205,7 +205,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 11)
+            else if(nextScene == 12)
             {
                 if(win == 1)
                 {
@@ -232,7 +232,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 12)
+            else if(nextScene == 13)
             {
                 if(win == 1)
                 {
@@ -261,7 +261,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 13)
+            else if(nextScene == 14)
             {
                 if(win == 1)
                 {

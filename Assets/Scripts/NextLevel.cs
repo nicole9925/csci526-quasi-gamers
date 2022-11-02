@@ -98,7 +98,7 @@ public class NextLevel : MonoBehaviour
         switch(button)
         {
             case "LevelSelectButton":
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Scenes/Current_Scenes/LevelSelector");
             break;
 
             case "ReplayButton":
@@ -109,7 +109,7 @@ public class NextLevel : MonoBehaviour
             case "NextLevelButton":
             StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("nextScene")-2, 1));
             int nextScene = PlayerPrefs.GetInt("nextScene");
-            if(nextScene == 14)
+            if(nextScene == 15)
             {
                 if(nextLevelButton != null)
                 {
