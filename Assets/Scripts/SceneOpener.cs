@@ -82,6 +82,11 @@ public class SceneOpener : MonoBehaviour
             SceneManager.LoadScene("Scenes/Current_Scenes/Level_11");
             break;
 
+            case "ExitButton":
+            sendAnalytics(11, analyticsData);
+            SceneManager.LoadScene("Scenes/Current_Scenes/PlayGame");
+            break;
+
             default:
             break;
         }
