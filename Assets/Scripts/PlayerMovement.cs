@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     public float speed = 20.0f;
     public float groundDrag = 2.0f;
+    public float timeScale = 1.0f;
     public float airDrag = 0.5f;
     public float groundInputScale = 1.0f;
     public float airInputScale = 0.1f;
@@ -32,7 +34,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 lastPosition;
     private float totalDistance;
     private AnalyticsManager analytics;
-    
+
+    private void Awake()
+    {
+        Time.timeScale = timeScale;
+    }
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
