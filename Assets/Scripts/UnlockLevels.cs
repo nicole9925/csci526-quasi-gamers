@@ -16,6 +16,10 @@ public class UnlockLevels : MonoBehaviour
     private Button level5;
     private Button level6;
     private Button level7;
+    private Button level8;
+    private Button level9;
+    private Button level10;
+    private Button level11;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,10 @@ public class UnlockLevels : MonoBehaviour
         level5 = GameObject.Find("Lvl5").GetComponent<Button>();
         level6 = GameObject.Find("Lvl6").GetComponent<Button>();
         level7 = GameObject.Find("Lvl7").GetComponent<Button>();
+        level8 = GameObject.Find("Lvl8").GetComponent<Button>();
+        level9 = GameObject.Find("Lvl9").GetComponent<Button>();
+        level10 = GameObject.Find("Lvl10").GetComponent<Button>();
+        level11 = GameObject.Find("Lvl11").GetComponent<Button>();
 
         if(enableUnlockLevels)
         {
@@ -38,6 +46,10 @@ public class UnlockLevels : MonoBehaviour
             level5.interactable = false;
             level6.interactable = false;
             level7.interactable = false;
+            level8.interactable = false;
+            level9.interactable = false;
+            level10.interactable = false;
+            level11.interactable = false;
         }
     }
 
@@ -48,7 +60,7 @@ public class UnlockLevels : MonoBehaviour
         win = PlayerPrefs.GetInt("win");
         if(enableUnlockLevels == true)
         {
-            if(nextScene == 3)
+            if(nextScene == 4)
             {
                 if(win == 1)
                 {
@@ -60,7 +72,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 4)
+            else if(nextScene == 5)
             {
                 if(win == 1)
                 {
@@ -73,7 +85,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
             
-            else if(nextScene == 5)
+            else if(nextScene == 6)
             {
                 if(win == 1)
                 {
@@ -88,7 +100,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 6)
+            else if(nextScene == 7)
             {
                 if(win == 1)
                 {
@@ -105,7 +117,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 7)
+            else if(nextScene == 8)
             {
                 if(win == 1)
                 {
@@ -124,7 +136,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 8)
+            else if(nextScene == 9)
             {
                 if(win == 1)
                 {
@@ -145,7 +157,7 @@ public class UnlockLevels : MonoBehaviour
                 }
             }
 
-            else if(nextScene == 9)
+            else if(nextScene == 10)
             {
                 if(win == 1)
                 {
@@ -165,6 +177,118 @@ public class UnlockLevels : MonoBehaviour
                     level4.interactable = true;
                     level5.interactable = true;
                     level6.interactable = true;
+                }
+            }
+
+            else if(nextScene == 11)
+            {
+                if(win == 1)
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                    level7.interactable = true;
+                    level8.interactable = true;
+                }
+                else
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                    level7.interactable = true;
+                }
+            }
+
+            else if(nextScene == 12)
+            {
+                if(win == 1)
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                    level7.interactable = true;
+                    level8.interactable = true;
+                    level9.interactable = true;
+                }
+                else
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                    level7.interactable = true;
+                    level8.interactable = true;
+                }
+            }
+
+            else if(nextScene == 13)
+            {
+                if(win == 1)
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                    level7.interactable = true;
+                    level8.interactable = true;
+                    level9.interactable = true;
+                    level10.interactable = true;
+                }
+                else
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                    level7.interactable = true;
+                    level8.interactable = true;
+                    level9.interactable = true;
+                }
+            }
+
+            else if(nextScene == 14)
+            {
+                if(win == 1)
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                    level7.interactable = true;
+                    level8.interactable = true;
+                    level9.interactable = true;
+                    level10.interactable = true;
+                    level11.interactable = true;
+                }
+                else
+                {
+                    level1.interactable = true;
+                    level2.interactable = true;
+                    level3.interactable = true;
+                    level4.interactable = true;
+                    level5.interactable = true;
+                    level6.interactable = true;
+                    level7.interactable = true;
+                    level8.interactable = true;
+                    level9.interactable = true;
+                    level10.interactable = true;
                 }
             }
         }

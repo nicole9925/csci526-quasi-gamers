@@ -95,6 +95,6 @@ public class GameOverLabel : MonoBehaviour
     public void LoadReplayScene()
     {
         print("here");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Scenes/Current_Scenes/ReplayOrNextLevel");
     }
 }
