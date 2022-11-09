@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _rb.centerOfMass = Vector3.zero;
+        _rb.inertiaTensorRotation = Quaternion.identity;
         _input = GetComponent<InputController>();
         playerParticle = GetComponentInChildren<ParticleSystem>();
         if(playerParticle != null)
@@ -49,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         GroundedCheck();
 
         if (isMovementDisabled)
@@ -81,21 +84,13 @@ public class PlayerMovement : MonoBehaviour
         {
             _moveDirection = Vector3.ProjectOnPlane(_moveDirection, _groundNormal).normalized * _moveDirection.magnitude;
         }
-
         _rb.AddForce(_moveDirection * (speed * inputScale), ForceMode.Force);
-
-        if (!_moveDirection.Equals(Vector3.zero))
-        {
-            if (battery)
-            {
-                battery.UseEnergy();
-            }
-        }
 
     }
 
     private void Update()
-    {   
+    {
+       
         float distance = Vector3.Distance(lastPosition, transform.position);
         totalDistance += distance;
         PlayerPrefs.SetFloat("distance", totalDistance);
