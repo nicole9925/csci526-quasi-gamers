@@ -27,12 +27,16 @@ public class PlayerMovement : MonoBehaviour
     private float disableMovementTimer = 0.0f;
     private float disableMovementTime = 1.0f;
 
+    public float rotationSpeed;
+
     private Rigidbody _rb;
     private InputController _input;
 
     private Vector3 lastPosition;
     private float totalDistance;
     private AnalyticsManager analytics;
+
+    private Animator _animator;
 
     void Start()
     {
@@ -47,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         }
         lastPosition = transform.position;
         analytics = new AnalyticsManager();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     void FixedUpdate()
@@ -85,9 +90,14 @@ public class PlayerMovement : MonoBehaviour
             _moveDirection = Vector3.ProjectOnPlane(_moveDirection, _groundNormal).normalized * _moveDirection.magnitude;
         } if (_moveDirection != Vector3.zero)
         {
+            //Vector3 _turnDirection = new Vector3(_moveDirection.x, -_moveDirection.y, _moveDirection.z);
+            //print(_moveDirection);
+            //Quaternion toRotation = Quaternion.LookRotation(_turnDirection, Vector3.up);
+            //transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
             transform.right = -_moveDirection;
         }
         _rb.AddForce(_moveDirection * (speed * inputScale), ForceMode.Force);
+        _animator.SetFloat("Speed", _rb.velocity.magnitude);
 
     }
 
