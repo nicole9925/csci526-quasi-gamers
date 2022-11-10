@@ -14,6 +14,7 @@ public class NextLevel : MonoBehaviour
    private Transform replayButton;
    private Transform nextLevelButton;
    private AnalyticsManager analytics;
+   private Transform gameOverText;
    private int analyticsData;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class NextLevel : MonoBehaviour
         levelSelectButton = transform.Find("LevelSelectButton");
         replayButton = transform.Find("ReplayButton");
         nextLevelButton = transform.Find("NextLevelButton");
+        gameOverText = transform.Find("GameOverText");
 
         if(levelCompleteText != null)
         {
@@ -48,6 +50,11 @@ public class NextLevel : MonoBehaviour
         {
             nextLevelButton.gameObject.SetActive(false);
         }
+
+        if(gameOverText != null)
+        {
+            gameOverText.gameObject.SetActive(false);
+        }
     }
 
     void Update()
@@ -70,7 +77,14 @@ public class NextLevel : MonoBehaviour
 
             if(nextLevelButton != null)
             {
-                nextLevelButton.gameObject.SetActive(true);
+                if(PlayerPrefs.GetInt("nextScene") != 15)
+                {
+                    nextLevelButton.gameObject.SetActive(true);
+                }
+                else
+                {
+                    gameOverText.gameObject.SetActive(true);
+                }
             }
         }
         else if(PlayerPrefs.GetInt("lose") == 1)
