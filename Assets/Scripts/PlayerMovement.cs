@@ -83,6 +83,9 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             _moveDirection = Vector3.ProjectOnPlane(_moveDirection, _groundNormal).normalized * _moveDirection.magnitude;
+        } if (_moveDirection != Vector3.zero)
+        {
+            transform.right = -_moveDirection;
         }
         _rb.AddForce(_moveDirection * (speed * inputScale), ForceMode.Force);
 
