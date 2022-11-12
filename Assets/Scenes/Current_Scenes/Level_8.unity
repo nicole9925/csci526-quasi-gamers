@@ -9970,6 +9970,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 699690603}
     m_Modifications:
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: forceMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchDir.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchForce
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: neutralizeVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: disablePlayerMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2415852319675984078, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
       propertyPath: m_RootOrder
       value: 190
@@ -27628,6 +27648,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 699690603}
     m_Modifications:
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: forceMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchDir.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: neutralizeVelocity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2415852319675984078, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -43261,6 +43297,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 888734235165926620}
     m_Modifications:
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: forceMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchDir.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchForce
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: neutralizeVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: disablePlayerMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2415852319675984078, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
       propertyPath: m_RootOrder
       value: 182

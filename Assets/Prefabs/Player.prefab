@@ -181,7 +181,7 @@ MonoBehaviour:
   gameOverLabel: {fileID: 0}
   playerParticle: {fileID: 0}
   speed: 40
-  groundDrag: 0.5
+  groundDrag: 0.75
   airDrag: 0.5
   groundInputScale: 1
   airInputScale: 0.1
@@ -191,6 +191,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 265
   groundedDistance: 0.5
+  rotationSpeed: 0
 --- !u!114 &8133353206586990677
 MonoBehaviour:
   m_ObjectHideFlags: 0

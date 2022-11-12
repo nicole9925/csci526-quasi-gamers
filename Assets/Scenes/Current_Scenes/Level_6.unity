@@ -1704,6 +1704,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: forceMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchDir.x
+      value: -0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchDir.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: neutralizeVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: disablePlayerMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2415852319675984078, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -8139,6 +8163,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1914330564}
     m_Modifications:
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: forceMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchDir.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchDir.z
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: launchForce
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: neutralizeVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
+      propertyPath: disablePlayerMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2415852319675984078, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
       propertyPath: m_RootOrder
       value: 12
