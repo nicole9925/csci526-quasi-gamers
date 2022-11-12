@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 79441268}
   - component: {fileID: 79441270}
   - component: {fileID: 79441269}
+  - component: {fileID: 79441271}
   m_Layer: 5
   m_Name: OptionsText
   m_TagString: Untagged
@@ -258,6 +259,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79441267}
   m_CullTransparentMesh: 1
+--- !u!95 &79441271
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79441267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &258755457
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +485,31 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8220483929134366194, guid: 4537fc3d4d326d6498bc03772ac04195, type: 3}
   m_PrefabInstance: {fileID: 305338008}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &305338010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7302234693483340170, guid: 4537fc3d4d326d6498bc03772ac04195, type: 3}
+  m_PrefabInstance: {fileID: 305338008}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &305338011
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305338010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &680387352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1149,31 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8220483929134366194, guid: 4537fc3d4d326d6498bc03772ac04195, type: 3}
   m_PrefabInstance: {fileID: 952864257}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &952864259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7302234693483340170, guid: 4537fc3d4d326d6498bc03772ac04195, type: 3}
+  m_PrefabInstance: {fileID: 952864257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &952864260
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952864259}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &961119389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1535,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194919884}
   m_CullTransparentMesh: 1
+--- !u!1 &1238666107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7302234693483340170, guid: 4537fc3d4d326d6498bc03772ac04195, type: 3}
+  m_PrefabInstance: {fileID: 1289103993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1238666111
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238666107}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1289103993
 PrefabInstance:
   m_ObjectHideFlags: 0
