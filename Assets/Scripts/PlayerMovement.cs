@@ -88,13 +88,31 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
         {
             _moveDirection = Vector3.ProjectOnPlane(_moveDirection, _groundNormal).normalized * _moveDirection.magnitude;
-        } if (_moveDirection != Vector3.zero)
+        }
+       
+        if (_moveDirection != Vector3.zero)
         {
-            //Vector3 _turnDirection = new Vector3(_moveDirection.x, -_moveDirection.y, _moveDirection.z);
-            //print(_moveDirection);
-            //Quaternion toRotation = Quaternion.LookRotation(_turnDirection, Vector3.up);
-            //transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-            transform.right = -_moveDirection;
+            Quaternion rotationTo;
+            if (_moveDirection.z > 0.5)
+            {
+                rotationTo = Quaternion.Euler(new Vector3(0, 90, 0));
+            }
+            else if (_moveDirection.z < -0.5)
+            {
+                rotationTo = Quaternion.Euler(new Vector3(0, 270, 0));
+            }
+            else if (_moveDirection.x > 0.5)
+            {
+                rotationTo = Quaternion.Euler(new Vector3(0, 180, 0));
+            }
+            else
+            {
+                rotationTo = Quaternion.Euler(new Vector3(0, 360, 0));
+           
+            }
+
+            _rb.rotation = Quaternion.Slerp(transform.rotation, rotationTo, Time.deltaTime * 5f);
+
         }
         _rb.AddForce(_moveDirection * (speed * inputScale), ForceMode.Force);
         _animator.SetFloat("Speed", _rb.velocity.magnitude);
