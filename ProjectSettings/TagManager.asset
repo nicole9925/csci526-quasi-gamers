@@ -11,6 +11,7 @@ TagManager:
   - groundTile
   - wall
   - controllerGrid
+  - deathSoundEffect
   layers:
   - Default
   - TransparentFX

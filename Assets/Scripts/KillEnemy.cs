@@ -6,6 +6,7 @@ using UnityEngine;
 public class KillEnemy : MonoBehaviour
 {
     public bool killed = false;
+    public AudioSource deathSoundEffect;
     GameOverLabel gameOverLabel;
     private Vector3 spawnPos;
     private AnalyticsManager analytics;
@@ -16,6 +17,7 @@ public class KillEnemy : MonoBehaviour
         gameOverLabel = GameObject.Find("UI Canvas").gameObject.GetComponent<GameOverLabel>();
         spawnPos = transform.position;
         analytics = new AnalyticsManager();
+        deathSoundEffect = GameObject.FindGameObjectWithTag("deathSoundEffect").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -43,16 +45,17 @@ public class KillEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        print(collision.gameObject);
         if (collision.gameObject.tag == "target" && killed == false)
         {
-            print("killed");
+
             CountKillRate countKillRate = GetComponentInParent<CountKillRate>();
             if (countKillRate)
             {
                 countKillRate.addKill();
             }
+            deathSoundEffect.Play();
             killed = true;
+            Destroy(gameObject, 3);
         }
     }
 }
