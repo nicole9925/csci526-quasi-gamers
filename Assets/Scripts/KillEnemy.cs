@@ -10,6 +10,7 @@ public class KillEnemy : MonoBehaviour
     GameOverLabel gameOverLabel;
     private Vector3 spawnPos;
     private AnalyticsManager analytics;
+    private Rigidbody _rb;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class KillEnemy : MonoBehaviour
         spawnPos = transform.position;
         analytics = new AnalyticsManager();
         deathSoundEffect = GameObject.FindGameObjectWithTag("deathSoundEffect").GetComponent<AudioSource>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -47,7 +49,7 @@ public class KillEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "target" && killed == false)
         {
-
+            _rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
             CountKillRate countKillRate = GetComponentInParent<CountKillRate>();
             if (countKillRate)
             {
