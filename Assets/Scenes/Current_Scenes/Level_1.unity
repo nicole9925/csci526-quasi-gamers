@@ -1023,6 +1023,7 @@ GameObject:
   - component: {fileID: 983964464}
   - component: {fileID: 983964466}
   - component: {fileID: 983964465}
+  - component: {fileID: 983964467}
   m_Layer: 5
   m_Name: WinLabel
   m_TagString: Untagged
@@ -1148,6 +1149,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983964463}
   m_CullTransparentMesh: 1
+--- !u!95 &983964467
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983964463}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &987661286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2152,6 +2173,7 @@ GameObject:
   - component: {fileID: 1080537443}
   - component: {fileID: 1080537445}
   - component: {fileID: 1080537444}
+  - component: {fileID: 1080537446}
   m_Layer: 5
   m_Name: Menu Text
   m_TagString: Untagged
@@ -2276,6 +2298,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080537442}
   m_CullTransparentMesh: 1
+--- !u!95 &1080537446
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080537442}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1274148755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2470,6 +2512,7 @@ GameObject:
   - component: {fileID: 1410650823}
   - component: {fileID: 1410650825}
   - component: {fileID: 1410650824}
+  - component: {fileID: 1410650826}
   m_Layer: 5
   m_Name: ' Label'
   m_TagString: Untagged
@@ -2594,6 +2637,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410650822}
   m_CullTransparentMesh: 1
+--- !u!95 &1410650826
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410650822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1522537934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3234,7 @@ GameObject:
   - component: {fileID: 2096926214}
   - component: {fileID: 2096926216}
   - component: {fileID: 2096926215}
+  - component: {fileID: 2096926217}
   m_Layer: 5
   m_Name: LoseLabel
   m_TagString: Untagged
@@ -3296,3 +3360,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096926213}
   m_CullTransparentMesh: 1
+--- !u!95 &2096926217
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096926213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
