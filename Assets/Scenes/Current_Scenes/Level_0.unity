@@ -702,6 +702,7 @@ GameObject:
   - component: {fileID: 470654919}
   - component: {fileID: 470654921}
   - component: {fileID: 470654920}
+  - component: {fileID: 470654922}
   m_Layer: 5
   m_Name: ' Label'
   m_TagString: Untagged
@@ -826,6 +827,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470654918}
   m_CullTransparentMesh: 1
+--- !u!95 &470654922
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470654918}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1309,7 @@ GameObject:
   - component: {fileID: 1573968104}
   - component: {fileID: 1573968106}
   - component: {fileID: 1573968105}
+  - component: {fileID: 1573968107}
   m_Layer: 5
   m_Name: Menu Text
   m_TagString: Untagged
@@ -1412,6 +1434,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573968103}
   m_CullTransparentMesh: 1
+--- !u!95 &1573968107
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573968103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1687669269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1465,7 @@ GameObject:
   - component: {fileID: 1687669270}
   - component: {fileID: 1687669272}
   - component: {fileID: 1687669271}
+  - component: {fileID: 1687669273}
   m_Layer: 5
   m_Name: WinLabel
   m_TagString: Untagged
@@ -1548,6 +1591,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687669269}
   m_CullTransparentMesh: 1
+--- !u!95 &1687669273
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687669269}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1779685516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,6 +1996,7 @@ GameObject:
   - component: {fileID: 2004496946}
   - component: {fileID: 2004496948}
   - component: {fileID: 2004496947}
+  - component: {fileID: 2004496949}
   m_Layer: 5
   m_Name: LoseLabel
   m_TagString: Untagged
@@ -2058,6 +2122,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004496945}
   m_CullTransparentMesh: 1
+--- !u!95 &2004496949
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004496945}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d4e642fef18fc540ab109081a41dac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3124790928677274527
 PrefabInstance:
   m_ObjectHideFlags: 0
