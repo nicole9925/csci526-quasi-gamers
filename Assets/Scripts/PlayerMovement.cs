@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         lastPosition = transform.position;
         analytics = new AnalyticsManager();
         _animator = GetComponentInChildren<Animator>();
+        gameOverLabel = GameObject.Find("UI Canvas").gameObject.GetComponent<GameOverLabel>();
     }
 
     void FixedUpdate()
