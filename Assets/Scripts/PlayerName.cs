@@ -1,4 +1,4 @@
 public static class PlayerName
 {
-    public static string name="123";
+    public static string name="Default Player Name";
 }
