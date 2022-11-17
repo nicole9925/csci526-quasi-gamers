@@ -4,16 +4,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Leaderboard: MonoBehaviour
+public class Leaderboard : MonoBehaviour
 {
+    private static Leaderboard instance;
     // const string url = "http://127.0.0.1:5000"; // local
     private const string url = "https://csci526-quasi-gamers.wl.r.appspot.com";  // gcp
-    void Start() {
-        Debug.Log("this is test for leaderboard");
-        StartCoroutine(AddToLeaderboard("test", 0, 10));
-        StartCoroutine(GetLeaderboard(1));
+    // void Start() {
+    //     Debug.Log("this is test for leaderboard");
+    //     StartCoroutine(AddToLeaderboard("test2", 0, 10));
+    //     StartCoroutine(GetLeaderboard(1));
+    // }
+
+    void Awake()
+    {
+        instance = this;
     }
-    IEnumerator  AddToLeaderboard(string username, int level, int time)
+
+    public static void StartAddToLeaderboardCoroutine(string username, int level, int time)
+    {
+        instance.StartCoroutine(AddToLeaderboard(username, level, time));
+    }
+
+    public static void StartGetLeaderboardCoroutine(int level, Action<PlayerRecord[]> callback)
+    {
+        instance.StartCoroutine(GetLeaderboard(level, callback));
+    }
+    
+    
+    public static IEnumerator AddToLeaderboard(string username, int level, int time)
     {
         UnityWebRequest www = UnityWebRequest.Get(String.Format($"{url}/update_leaderboard/{username}/{level}/{time}"));
         yield return www.SendWebRequest();
@@ -29,7 +47,7 @@ public class Leaderboard: MonoBehaviour
         
     }
 
-    IEnumerator GetLeaderboard(int level)
+    public static IEnumerator GetLeaderboard(int level, Action<PlayerRecord[]> callback)
     {
         UnityWebRequest www = UnityWebRequest.Get(String.Format($"{url}/leaderboard/{level}"));
         yield return www.SendWebRequest();
@@ -41,11 +59,7 @@ public class Leaderboard: MonoBehaviour
         else
         {
             PlayerRecord[] records = JsonHelper.FromJson<PlayerRecord>(www.downloadHandler.text);
-            foreach  (PlayerRecord pr in records)
-            {
-                Debug.Log(String.Format($"{pr.username}: {pr.time}"));
-            }
-            
+            callback?.Invoke(records);
         }
     }
 }
