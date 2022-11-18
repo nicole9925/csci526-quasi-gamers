@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountKillRate : MonoBehaviour
 {
@@ -23,11 +24,11 @@ public class CountKillRate : MonoBehaviour
         killCount++;
         if (killCount == numEnemies)
         {
-            Debug.Log(timeSpent);
-
-//             Leaderboard.AddToLeaderboard(PlayerName.name, 0, (int)timeSpent);
-
-
+            // Debug.Log(PlayerName.name);
+            // Debug.Log(timeSpent);
+            // Debug.Log(SceneManager.GetActiveScene().buildIndex);
+            Leaderboard.StartAddToLeaderboardCoroutine(PlayerName.name, SceneManager.GetActiveScene().buildIndex, (int)timeSpent);
+            PlayerPrefs.SetInt("finishTime", (int)timeSpent);
             gameOverLabel.deactivateGameOver();
             gameOverLabel.showLabel();
         }

@@ -33,6 +33,8 @@ public class Leaderboard : MonoBehaviour
     
     public static IEnumerator AddToLeaderboard(string username, int level, int time)
     {
+        username = username.Replace(" ", "_");
+        Debug.Log(String.Format($"{url}/update_leaderboard/{username}/{level}/{time}"));
         UnityWebRequest www = UnityWebRequest.Get(String.Format($"{url}/update_leaderboard/{username}/{level}/{time}"));
         yield return www.SendWebRequest();
         
