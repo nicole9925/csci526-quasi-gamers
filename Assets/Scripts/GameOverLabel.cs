@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class GameOverLabel : MonoBehaviour
     private int currentScene;
     private AnalyticsManager analytics;
     private int analyticsData;
+    public Text[] Entries;
 
     void Start()
     {
@@ -45,6 +47,18 @@ public class GameOverLabel : MonoBehaviour
         analyticsData = 0;
     }
 
+    void SetEntries(PlayerRecord[] result)
+    {
+        for (int i = 0; i < Math.Min(Entries.Length-1, result.Length); i++)
+        {
+            Entries[i].text = String.Format($"{result[i].username}: {result[i].time}");
+        }
+        winLabel.gameObject.SetActive(true);
+        PlayerPrefs.SetInt("win", 1);
+        PlayerPrefs.SetInt("lose", 0);
+        analyticsData = 2;
+    }
+    
     public void showLabel()
     {
         if (!showingLabel)
@@ -58,10 +72,8 @@ public class GameOverLabel : MonoBehaviour
             }
             else
             {
-                winLabel.gameObject.SetActive(true);
-                PlayerPrefs.SetInt("win", 1);
-                PlayerPrefs.SetInt("lose", 0);
-                analyticsData = 2;
+                Leaderboard.StartGetLeaderboardCoroutine(0, SetEntries);
+                Entries[Entries.Length-1].text = String.Format($"{PlayerName.name}(You): {PlayerPrefs.GetInt("finishTime")}");
             }
             
             PlayerPrefs.SetInt("currentScene", currentScene);

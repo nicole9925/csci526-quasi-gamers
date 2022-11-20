@@ -26,7 +26,7 @@ public class TiltUpdate : MonoBehaviour
         {
             Vector3 currentRot = transform.rotation.eulerAngles;
 
-            player = GameObject.Find("Player");
+            player = GameObject.FindWithTag("Player");
             Vector3 playerPos = player.transform.position;
 
             Vector3 platformCentre = GetComponent< Renderer>().bounds.center;
