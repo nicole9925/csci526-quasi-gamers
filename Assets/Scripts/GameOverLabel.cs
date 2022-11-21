@@ -13,6 +13,7 @@ public class GameOverLabel : MonoBehaviour
     private Transform winLabel;
     private Transform restartButton;
     private Transform menuButton;
+    private Transform background;
     private bool showingLabel = false;
     private int nextScene;
     private int currentScene;
@@ -28,11 +29,13 @@ public class GameOverLabel : MonoBehaviour
         winLabel = transform.Find("GameOver").Find("WinLabel");
         restartButton = transform.Find("Restart");
         menuButton = transform.Find("Menu");
+        background = transform.Find("GameOver").Find("Background");
 
 
         loseLabel.gameObject.SetActive(false);
         winLabel.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
+        background.gameObject.SetActive(false);
 
         nextScene = SceneManager.GetActiveScene().buildIndex + 1; 
         currentScene = SceneManager.GetActiveScene().buildIndex;
@@ -63,6 +66,8 @@ public class GameOverLabel : MonoBehaviour
     {
         if (!showingLabel)
         {
+
+            background.gameObject.SetActive(true);
             if (!hasWon)
             {
                 loseLabel.gameObject.SetActive(true);
