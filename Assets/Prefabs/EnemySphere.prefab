@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killed: 0
+  deathSoundEffect: {fileID: 0}
 --- !u!1 &3435364691986288331
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,8 +272,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3828397614123255824}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.011199188, y: 0.04444275, z: -0.00043439274}
-  m_LocalScale: {x: 0.8, y: 0.80000025, z: 0.80000025}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2893110317978878296}
