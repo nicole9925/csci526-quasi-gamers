@@ -112,6 +112,6 @@ public class GameOverLabel : MonoBehaviour
     public void LoadReplayScene()
     {
         print("here");
-        SceneManager.LoadScene("Scenes/Current_Scenes/ReplayOrNextLevel");
+        SceneManager.LoadScene("Scenes/Woody/ReplayOrNextLevel");
     }
 }

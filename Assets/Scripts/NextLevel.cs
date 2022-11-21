@@ -112,7 +112,7 @@ public class NextLevel : MonoBehaviour
         switch(button)
         {
             case "LevelSelectButton":
-            SceneManager.LoadScene("Scenes/Current_Scenes/LevelSelector");
+            SceneManager.LoadScene("Scenes/Woody/LevelSelector");
             break;
 
             case "ReplayButton":

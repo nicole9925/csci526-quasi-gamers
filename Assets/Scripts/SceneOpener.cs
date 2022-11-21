@@ -24,67 +24,67 @@ public class SceneOpener : MonoBehaviour
         {
             case "Lvl0":
             sendAnalytics(0, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_0");
+            SceneManager.LoadScene("Scenes/woody/Level_0");
             break;
 
             case "Lvl1":
             sendAnalytics(1, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_1");
+            SceneManager.LoadScene("Scenes/woody/Level_1");
             break;
 
             case "Lvl2":
             sendAnalytics(2, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_2");
+            SceneManager.LoadScene("Scenes/woody/Level_2");
             break;
 
             case "Lvl3":
             sendAnalytics(3, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_3");
+            SceneManager.LoadScene("Scenes/woody/Level_3");
             break;
 
             case "Lvl4":
             sendAnalytics(4, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_4");
+            SceneManager.LoadScene("Scenes/woody/Level_4");
             break;
 
             case "Lvl5":
             sendAnalytics(5, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_5");
+            SceneManager.LoadScene("Scenes/woody/Level_5");
             break;
 
             case "Lvl6":
             sendAnalytics(6, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_6");
+            SceneManager.LoadScene("Scenes/woody/Level_6");
             break;
 
             case "Lvl7":
             sendAnalytics(7, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_7");
+            SceneManager.LoadScene("Scenes/woody/Level_7");
             break;
 
             case "Lvl8":
             sendAnalytics(8, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_8");
+            SceneManager.LoadScene("Scenes/woody/Level_8");
             break;
 
             case "Lvl9":
             sendAnalytics(9, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_9");
+            SceneManager.LoadScene("Scenes/woody/Level_9");
             break;
 
             case "Lvl10":
             sendAnalytics(10, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_10");
+            SceneManager.LoadScene("Scenes/woody/Level_10");
             break;
 
             case "Lvl11":
             sendAnalytics(11, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/Level_11");
+            SceneManager.LoadScene("Scenes/woody/Level_11");
             break;
 
             case "ExitButton":
             sendAnalytics(11, analyticsData);
-            SceneManager.LoadScene("Scenes/Current_Scenes/PlayGame");
+            SceneManager.LoadScene("Scenes/woody/PlayGame");
             break;
 
             default:

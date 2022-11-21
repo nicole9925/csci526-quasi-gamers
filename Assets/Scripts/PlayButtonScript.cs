@@ -13,6 +13,6 @@ public class PlayButtonScript : MonoBehaviour
 
     public void OpenLevelSelection()
     {
-        SceneManager.LoadScene("Scenes/Current_Scenes/LevelSelector");
+        SceneManager.LoadScene("Scenes/woody/LevelSelector");
     }
 }
