@@ -11,6 +11,8 @@ public class KillEnemy : MonoBehaviour
     private Vector3 spawnPos;
     private AnalyticsManager analytics;
     private Rigidbody _rb;
+    public Material[] materials;
+    Renderer rend;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,11 @@ public class KillEnemy : MonoBehaviour
         analytics = new AnalyticsManager();
         deathSoundEffect = GameObject.FindGameObjectWithTag("deathSoundEffect").GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody>();
+        rend = GetComponent<Renderer>();
+        rend.sharedMaterial = materials[0];
+        //GetComponent<DissolveObject>().enabled = false;
+        //var disScript = GetComponent<DissolveObject>();
+        //disScript.enabled = false;
     }
 
     void Update()
@@ -55,10 +62,18 @@ public class KillEnemy : MonoBehaviour
             {
                 countKillRate.addKill();
             }
+            rend.sharedMaterial = materials[1];
+            GetComponent<DissolveObject>().enabled = true;
+
             deathSoundEffect.Play();
             killed = true;
+
+
+
+
             Destroy(gameObject, 3);
         }
     }
+
 }
 

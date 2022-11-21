@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06637915, g: 0.159325, b: 0.20912603, a: 1}
+  m_IndirectSpecularColor: {r: 0.066483736, g: 0.15934065, b: 0.20915899, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -713,6 +713,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3435364691138700930, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435364691138700930, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c34aba90ee774b48a2510ce2ca82dbc, type: 2}
+    - target: {fileID: 3435364691138700930, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f2ec52ccd5d9e243971ef76a7e57ee6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
 --- !u!4 &566502411 stripped
@@ -743,6 +755,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 100
+--- !u!114 &804662873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804662861}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08857cf0197cd4b918ba0e19437541e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noiseStrength: 0.25
+  objectHeight: 1
+  base_time: 0
+  minHeight: Infinity
 --- !u!1 &895030311
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killed: 0
   deathSoundEffect: {fileID: 0}
+  materials: []
 --- !u!54 &895030313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6344,6 +6373,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3435364691138700930, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435364691138700930, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c34aba90ee774b48a2510ce2ca82dbc, type: 2}
+    - target: {fileID: 3435364691138700930, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f2ec52ccd5d9e243971ef76a7e57ee6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
 --- !u!1 &1701984587 stripped
@@ -6364,6 +6405,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 20
+--- !u!114 &1701984599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701984587}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08857cf0197cd4b918ba0e19437541e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noiseStrength: 0.25
+  objectHeight: 1
+  base_time: 0
+  minHeight: Infinity
 --- !u!1 &1768330784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3124790929855837663, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
@@ -6739,6 +6796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killed: 0
   deathSoundEffect: {fileID: 0}
+  materials: []
 --- !u!1 &2106582422
 GameObject:
   m_ObjectHideFlags: 0
