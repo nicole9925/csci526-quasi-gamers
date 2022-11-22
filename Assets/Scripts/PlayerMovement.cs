@@ -169,7 +169,7 @@ public class PlayerMovement : MonoBehaviour
             #endif
             changeWallColor();
             playerParticle.Play();
-            gameObject.GetComponent<Renderer>().material.color = new Color32(10, 233, 203, 100);
+            //gameObject.GetComponent<Renderer>().material.color = new Color32(10, 233, 203, 100);
         }
 
         if (playerParticle != null && collision.gameObject.tag == "wall" && playerParticle.isPlaying == true)

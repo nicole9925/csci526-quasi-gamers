@@ -39,7 +39,7 @@ public class BreakWallTimer : MonoBehaviour
            
             returnWallColor();
             breakWallTimer.gameObject.SetActive(false);
-            player.GetComponent<Renderer>().material.color = new Color32(41, 104, 183, 255);           
+           //player.GetComponent<Renderer>().material.color = new Color32(41, 104, 183, 255);           
         }
 
         else if(playerParticle.isPlaying == true && countDownTime > 0)
@@ -65,7 +65,7 @@ public class BreakWallTimer : MonoBehaviour
             {
                 returnWallColor();
                 playerParticle.Stop();
-                player.GetComponent<Renderer>().material.color = new Color32(41, 104, 183, 255);
+                //player.GetComponent<Renderer>().material.color = new Color32(41, 104, 183, 255);
             }
             breakWallTimer.gameObject.SetActive(false);
         }
