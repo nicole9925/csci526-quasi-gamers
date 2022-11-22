@@ -989,6 +989,7 @@ GameObject:
   - component: {fileID: 118144092}
   - component: {fileID: 118144095}
   - component: {fileID: 118144096}
+  - component: {fileID: 118144097}
   - component: {fileID: 118144094}
   m_Layer: 0
   m_Name: Tilemap
@@ -1295,7 +1296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118144090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 402d881497c044ae3aae7fd27876f435, type: 3}
   m_Name: 
@@ -1308,12 +1309,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118144090}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Material: {fileID: 13400000, guid: fea479f6644f14f55b733e6ba90840b2, type: 2}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 21.72, y: 1.5, z: 8.85}
+  m_Center: {x: -1.4, y: 0, z: 1.46}
 --- !u!114 &118144096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,6 +1331,22 @@ MonoBehaviour:
     m_Position: {x: 0, y: 0, z: 0}
     m_Size: {x: 0, y: 0, z: 0}
   tilemap: {fileID: 0}
+--- !u!114 &118144097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118144090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5eee500b5f54f43a00a21fdb0a3a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplier: 0.1
+  playerOnPlatform: 0
+  zRotBounds: -1
+  xRotBounds: -1
 --- !u!1 &119200335
 GameObject:
   m_ObjectHideFlags: 0
@@ -7049,6 +7066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -7133,6 +7151,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &709240251
 GameObject:
   m_ObjectHideFlags: 0
@@ -19275,8 +19313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca38ea8723ef8413b923f17016fd45fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  gameOverLabel: {fileID: 704056637}
+  killed: 0
+  deathSoundEffect: {fileID: 0}
 --- !u!1 &2038533743
 GameObject:
   m_ObjectHideFlags: 0

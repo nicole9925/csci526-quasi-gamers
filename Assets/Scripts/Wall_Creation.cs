@@ -44,6 +44,7 @@ public class Wall_Creation : MonoBehaviour {
         // if (col.gameObject.tag == "groundTile") {
         //     col.gameObject.transform.localScale = new Vector3(1, 3, 1);
         // }
+        Material[] tileMaterials;
         if (isActive == true) {
             // MyPlayerMovement.speed = 20;
             if (col.gameObject.tag == "groundTile") {
@@ -52,10 +53,14 @@ public class Wall_Creation : MonoBehaviour {
                 if (exited != justExited) {
                     
                     if(exited.tag == "groundTile") {
-                        exited.GetComponent<MeshRenderer>().material = defaultMaterial;
+                        tileMaterials = exited.GetComponent<MeshRenderer>().materials;
+                        tileMaterials[0] = defaultMaterial;
+                        exited.GetComponent<MeshRenderer>().materials = tileMaterials;
                     }
                 }
-                justExited.GetComponent<MeshRenderer>().material = justExitedMaterial;
+                tileMaterials = justExited.GetComponent<MeshRenderer>().materials;
+                tileMaterials[0] = justExitedMaterial;
+                justExited.GetComponent<MeshRenderer>().materials = tileMaterials;
             }
         } 
     }
