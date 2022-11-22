@@ -27,8 +27,9 @@ public class CountKillRate : MonoBehaviour
             Debug.Log("Name: " + PlayerPrefs.GetString("name"));
             Debug.Log("Time: " + timeSpent);
             Debug.Log("current level: " + (SceneManager.GetActiveScene().buildIndex - 3));
-            Leaderboard.StartAddToLeaderboardCoroutine(PlayerPrefs.GetString("name"), SceneManager.GetActiveScene().buildIndex - 3, (int)timeSpent);
-            PlayerPrefs.SetInt("finishTime", (int)timeSpent);
+            Leaderboard.StartAddToLeaderboardCoroutine(PlayerPrefs.GetString("name"), SceneManager.GetActiveScene().buildIndex - 3, timeSpent);
+            PlayerPrefs.SetFloat("finishTime", timeSpent);
+            // PlayerPrefs.SetInt("finishTime", (int)timeSpent);
             gameOverLabel.deactivateGameOver();
             gameOverLabel.showLabel();
         }

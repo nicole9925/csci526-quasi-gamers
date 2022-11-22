@@ -6,12 +6,14 @@ using UnityEngine.Tilemaps;
 public class TilemapScript : MonoBehaviour
 {
     private List<GameObject> destructibleTiles = new List<GameObject>();
-    public BoundsInt cellBounds;
+    private BoundsInt cellBounds;
     public Tilemap tilemap;
     Vector3 t_Min, t_Max, playerPos;
+    Vector3 tm_Min, tm_Max;
     private GameObject player;
     public int numOfTilesToDestroy;
     private int walkableLayer;
+    private bool playerOnPlatform = false;
 
     public float minWait;
     public float maxWait;
@@ -23,7 +25,7 @@ public class TilemapScript : MonoBehaviour
     {
         foreach (Transform child in parent)
         {
-            if (child.gameObject.tag != "indestructiveTile" && child.gameObject.tag != "RowTag" &&  child.gameObject.layer == walkableLayer)
+            if (child.gameObject.tag != "indestructibleTile" &&  child.gameObject.layer == walkableLayer)
             {
                 tileList.Add(child.gameObject);
             }
@@ -31,10 +33,21 @@ public class TilemapScript : MonoBehaviour
         }
     }
 
+    private bool IsPlayerOnPlatform(){
+
+        if(playerPos.x >= tm_Min.x && playerPos.y >= tm_Min.y && playerPos.z >= tm_Min.z && playerPos.x <=tm_Max.x && playerPos.y <=tm_Max.y && playerPos.x <=tm_Max.y)
+        {
+            return true;
+        }
+        return false;
+    }
+
     void Awake()
     {
         tilemap = GetComponent<Tilemap>();
-        cellBounds = tilemap.cellBounds;
+        tm_Min = tilemap.GetComponent<Collider>().bounds.min;
+        tm_Max = tilemap.GetComponent<Collider>().bounds.max;
+        Debug.Log(tm_Min);
 
         //numOfTilesToDestroy = 1;
         walkableLayer = LayerMask.NameToLayer("walkable");
@@ -49,14 +62,20 @@ public class TilemapScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {   
         playerPos = player.transform.position;
-        StartCoroutine(PlaceBomb());
+        
+        if(IsPlayerOnPlatform())
+        {
+            Debug.Log("tile bomb begun");
+            StartCoroutine(PlaceBomb());
+        }
+        
     }
 
     IEnumerator PlaceBomb()

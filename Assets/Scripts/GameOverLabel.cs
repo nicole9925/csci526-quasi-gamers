@@ -52,14 +52,25 @@ public class GameOverLabel : MonoBehaviour
 
     void SetEntries(PlayerRecord[] result)
     {
+        List<float> rankList = new List<float>();
+        foreach  (PlayerRecord pr in result)
+        {
+            rankList.Add(pr.time);
+        }
+        
+        float[] rank = rankList.ToArray();
+        
         // Debug.Log(result);
         for (int i = 0; i < Math.Min(Entries.Length-1, result.Length); i++)
         {
-            Entries[i].text = String.Format($"{result[i].username}: {result[i].time}");
+            Entries[i].text = String.Format($"{result[i].username}: {result[i].time:F2}");
         }
         winLabel.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
         PlayerPrefs.SetInt("win", 1);
         PlayerPrefs.SetInt("lose", 0);
+        Debug.Log("Player Rank: " + Math.Abs(Array.BinarySearch(rank, PlayerPrefs.GetFloat("finishTime"))));
+        PlayerPrefs.SetInt("player_rank", Math.Abs(Array.BinarySearch(rank, PlayerPrefs.GetFloat("finishTime"))));
         analyticsData = 2;
     }
     
@@ -75,11 +86,14 @@ public class GameOverLabel : MonoBehaviour
                 PlayerPrefs.SetInt("lose", 1);
                 PlayerPrefs.SetInt("win", 0);
                 analyticsData = 3;
+                restartButton.gameObject.SetActive(true);
             }
             else
             {
                 Leaderboard.StartGetLeaderboardCoroutine(SceneManager.GetActiveScene().buildIndex - 3, SetEntries);
-                Entries[Entries.Length-1].text = String.Format($"{PlayerPrefs.GetString("name")}(You): {PlayerPrefs.GetInt("finishTime")}");
+                Debug.Log("FINISH TIME: " + PlayerPrefs.GetFloat("finishTime"));
+                Debug.Log("Player Rank here: " + PlayerPrefs.GetInt("player_rank"));
+                Entries[Entries.Length-1].text = String.Format($"{PlayerPrefs.GetString("name")}(You): {PlayerPrefs.GetFloat("finishTime"):F2}");
             }
             
             PlayerPrefs.SetInt("currentScene", currentScene);
@@ -95,8 +109,6 @@ public class GameOverLabel : MonoBehaviour
             PlayerPrefs.SetFloat("distance", 0);
             
             showingLabel = true;
-
-            restartButton.gameObject.SetActive(true);
 
             restartButton.GetComponent<Button>()
                 .onClick.AddListener(LoadReplayScene);
