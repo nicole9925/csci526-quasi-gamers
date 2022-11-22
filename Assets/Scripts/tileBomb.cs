@@ -6,13 +6,14 @@ public class tileBomb : MonoBehaviour
 {
 
     private float totalTime = 5;
-    public float timeRemaining;
+    public float timeRemaining =0;
     public bool timerRunning = false;
     private Vector3 pos;
     private GameObject TiletoDestroy;
     private SpriteRenderer bombColor;
-    private bool black = true;
+    private bool white = true;
     private float colorChangeTime;
+    private int tileNum;
 
 
     void Awake()
@@ -31,33 +32,48 @@ public class tileBomb : MonoBehaviour
     void Update()
     {
         if(timerRunning){
-            if(timeRemaining >0)
+            if(timeRemaining > 0)
             {
 
                 pos = TiletoDestroy.transform.position;
-                transform.position = new Vector3(pos.x, pos.y+1, pos.z);
+                transform.position = new Vector3(pos.x, pos.y+1.5f, pos.z);
+                transform.rotation = Quaternion.Euler(Camera.main.transform.rotation.eulerAngles.x,0f,0f);
                 timeRemaining -= Time.deltaTime;
             }
 
             else{
-                timeRemaining = 0;
+                TiletoDestroy.SetActive(false);
+                if (tileNum<1)
+                {
+                    gameObject.SetActive(false);
+                    timeRemaining = 0;
+                    Debug.Log("time has run out");
+                }
                 timerRunning = false;
                 timeRemaining = totalTime;
-                gameObject.SetActive(false);
-                TiletoDestroy.SetActive(false);
-                Debug.Log("time has run out");
+                bombColor.enabled = false;
+                colorChangeTime = totalTime;
             }
         }
+
+        Debug.Log(timerRunning);
         
     }
 
-    public void starTimer(GameObject tile){
+    public void starTimer(GameObject tile, int numOfTilesToDestroy){
 
         if(timeRemaining==totalTime && (!timerRunning)){
+            tileNum = numOfTilesToDestroy;
             TiletoDestroy = tile;
             pos = tile.transform.position;
-            transform.position = new Vector3(pos.x, pos.y+1, pos.z);
+            transform.position = new Vector3(pos.x, pos.y+1.5f, pos.z);
+            transform.rotation = Quaternion.Euler(Camera.main.transform.rotation.eulerAngles.x,0f,0f);
             gameObject.SetActive(true);
+            if(!bombColor.enabled)
+            {
+                bombColor.enabled = true;
+            }
+            
             timerRunning = true;
         }
     }
@@ -71,13 +87,9 @@ public class tileBomb : MonoBehaviour
             }
             else {
 
-                Debug.Log("color change time"+colorChangeTime);
-                Debug.Log("time remaining"+timeRemaining);
                 if((colorChangeTime - timeRemaining) >= 0.25){
                     changeColor();
                     colorChangeTime = timeRemaining;
-
-                    Debug.Log("slow change");
                 }
 
             }
@@ -87,13 +99,13 @@ public class tileBomb : MonoBehaviour
 
     private void changeColor(){
 
-        if(black){
-            bombColor.color = new Color (1, 0, 0, 1);
-            black=false;
+        if(white){
+            bombColor.color = new Color (1, 0.3f, 0.3f, 1);
+            white=false;
         }
         else{
-            bombColor.color = new Color (0, 0, 0, 1);
-            black=true;
+            bombColor.color = new Color (1, 1, 1, 1);
+            white=true;
         }
 
     }

@@ -16,6 +16,7 @@ public class PowerUp : MonoBehaviour
         if (collision.gameObject.tag == "target")
         {
             player.GetComponent<Wall_Creation>().setPowerUpActive();
+            Destroy(gameObject);
         }
     }
 }
