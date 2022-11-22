@@ -79,7 +79,7 @@ public class GameOverLabel : MonoBehaviour
             else
             {
                 Leaderboard.StartGetLeaderboardCoroutine(SceneManager.GetActiveScene().buildIndex - 3, SetEntries);
-                Entries[Entries.Length-1].text = String.Format($"{PlayerName.name}(You): {PlayerPrefs.GetInt("finishTime")}");
+                Entries[Entries.Length-1].text = String.Format($"{PlayerPrefs.GetString("name")}(You): {PlayerPrefs.GetInt("finishTime")}");
             }
             
             PlayerPrefs.SetInt("currentScene", currentScene);

@@ -6,7 +6,6 @@ public class LeaderboardController : MonoBehaviour
     public InputField name;
 
     public void setName() {
-        PlayerName.name = name.text;
-        Debug.Log(PlayerName.name);
+        PlayerPrefs.SetString("name", name.text);
     }
 }

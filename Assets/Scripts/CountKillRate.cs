@@ -24,10 +24,10 @@ public class CountKillRate : MonoBehaviour
         killCount++;
         if (killCount == numEnemies)
         {
-            Debug.Log("Name: " + PlayerName.name);
+            Debug.Log("Name: " + PlayerPrefs.GetString("name"));
             Debug.Log("Time: " + timeSpent);
             Debug.Log("current level: " + (SceneManager.GetActiveScene().buildIndex - 3));
-            Leaderboard.StartAddToLeaderboardCoroutine(PlayerName.name, SceneManager.GetActiveScene().buildIndex - 3, (int)timeSpent);
+            Leaderboard.StartAddToLeaderboardCoroutine(PlayerPrefs.GetString("name"), SceneManager.GetActiveScene().buildIndex - 3, (int)timeSpent);
             PlayerPrefs.SetInt("finishTime", (int)timeSpent);
             gameOverLabel.deactivateGameOver();
             gameOverLabel.showLabel();
