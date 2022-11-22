@@ -47,7 +47,6 @@ public class tileBomb : MonoBehaviour
                 {
                     gameObject.SetActive(false);
                     timeRemaining = 0;
-                    Debug.Log("time has run out");
                 }
                 timerRunning = false;
                 timeRemaining = totalTime;
@@ -55,8 +54,6 @@ public class tileBomb : MonoBehaviour
                 colorChangeTime = totalTime;
             }
         }
-
-        Debug.Log(timerRunning);
         
     }
 
