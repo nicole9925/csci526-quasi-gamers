@@ -37,8 +37,8 @@ public class GameOverLabel : MonoBehaviour
         restartButton.gameObject.SetActive(false);
         background.gameObject.SetActive(false);
 
-        nextScene = SceneManager.GetActiveScene().buildIndex + 2; 
-        currentScene = SceneManager.GetActiveScene().buildIndex - 3;
+        nextScene = SceneManager.GetActiveScene().buildIndex + 1; 
+        currentScene = SceneManager.GetActiveScene().buildIndex;
 
         PlayerPrefs.SetInt("currentScene", currentScene);
         PlayerPrefs.SetInt("nextScene", nextScene);
@@ -78,7 +78,7 @@ public class GameOverLabel : MonoBehaviour
             }
             else
             {
-                Leaderboard.StartGetLeaderboardCoroutine(currentScene, SetEntries);
+                Leaderboard.StartGetLeaderboardCoroutine(SceneManager.GetActiveScene().buildIndex - 3, SetEntries);
                 Entries[Entries.Length-1].text = String.Format($"{PlayerName.name}(You): {PlayerPrefs.GetInt("finishTime")}");
             }
             
