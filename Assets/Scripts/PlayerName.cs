@@ -1,4 +1,4 @@
 public static class PlayerName
 {
-    public static string name="random name";
+    public static string name="TEST";
 }

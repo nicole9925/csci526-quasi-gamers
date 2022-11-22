@@ -22,9 +22,9 @@ public class DissolveObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(base_time);
+        // Debug.Log(base_time);
         var time = (Time.time - base_time) * Mathf.PI * 0.25f;
-        Debug.Log(time);
+        // Debug.Log(time);
         //var time = Time.time* Mathf.PI * 0.5f;
         
             float height = transform.position.y;

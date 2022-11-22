@@ -37,8 +37,8 @@ public class GameOverLabel : MonoBehaviour
         restartButton.gameObject.SetActive(false);
         background.gameObject.SetActive(false);
 
-        nextScene = SceneManager.GetActiveScene().buildIndex + 1; 
-        currentScene = SceneManager.GetActiveScene().buildIndex;
+        nextScene = SceneManager.GetActiveScene().buildIndex + 2; 
+        currentScene = SceneManager.GetActiveScene().buildIndex - 3;
 
         PlayerPrefs.SetInt("currentScene", currentScene);
         PlayerPrefs.SetInt("nextScene", nextScene);
@@ -52,6 +52,7 @@ public class GameOverLabel : MonoBehaviour
 
     void SetEntries(PlayerRecord[] result)
     {
+        // Debug.Log(result);
         for (int i = 0; i < Math.Min(Entries.Length-1, result.Length); i++)
         {
             Entries[i].text = String.Format($"{result[i].username}: {result[i].time}");
@@ -77,7 +78,7 @@ public class GameOverLabel : MonoBehaviour
             }
             else
             {
-                Leaderboard.StartGetLeaderboardCoroutine(0, SetEntries);
+                Leaderboard.StartGetLeaderboardCoroutine(currentScene, SetEntries);
                 Entries[Entries.Length-1].text = String.Format($"{PlayerName.name}(You): {PlayerPrefs.GetInt("finishTime")}");
             }
             
