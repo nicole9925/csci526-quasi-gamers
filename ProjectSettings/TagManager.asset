@@ -12,8 +12,8 @@ TagManager:
   - wall
   - controllerGrid
   - deathSoundEffect
-  - indestructiveTile
   - RowTag
+  - indestructibleTile
   layers:
   - Default
   - TransparentFX

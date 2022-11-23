@@ -20,7 +20,7 @@ public class Leaderboard : MonoBehaviour
         instance = this;
     }
 
-    public static void StartAddToLeaderboardCoroutine(string username, int level, int time)
+    public static void StartAddToLeaderboardCoroutine(string username, int level, float time)
     {
         instance.StartCoroutine(AddToLeaderboard(username, level, time));
     }
@@ -31,7 +31,7 @@ public class Leaderboard : MonoBehaviour
     }
     
     
-    public static IEnumerator AddToLeaderboard(string username, int level, int time)
+    public static IEnumerator AddToLeaderboard(string username, int level, float time)
     {
         username = username.Replace(" ", "_");
         Debug.Log(String.Format($"{url}/update_leaderboard/{username}/{level}/{time}"));
@@ -46,7 +46,6 @@ public class Leaderboard : MonoBehaviour
         {
             Debug.Log(www.downloadHandler.text);
         }
-        
     }
 
     public static IEnumerator GetLeaderboard(int level, Action<PlayerRecord[]> callback)
@@ -70,7 +69,7 @@ public class Leaderboard : MonoBehaviour
 public class PlayerRecord
 {
     public string username;
-    public int time;
+    public float time;
 }
 
 public static class JsonHelper

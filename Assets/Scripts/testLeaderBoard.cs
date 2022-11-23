@@ -18,8 +18,6 @@ public class testLeaderBoard : MonoBehaviour
     void Start() {
         Debug.Log("this is test for leaderboard");
         Leaderboard.StartAddToLeaderboardCoroutine("test3", 0, 10);
-        
-
     }
 
     // Update is called once per frame
