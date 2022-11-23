@@ -14,6 +14,7 @@ TagManager:
   - deathSoundEffect
   - RowTag
   - indestructibleTile
+  - floor
   layers:
   - Default
   - TransparentFX
