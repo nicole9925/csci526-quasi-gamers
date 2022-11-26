@@ -13,11 +13,15 @@ public class testLeaderBoard : MonoBehaviour
             Debug.Log(String.Format($"{pr.username}: {pr.time}"));
         }
     }
+
+
     
     // Start is called before the first frame update
     void Start() {
         Debug.Log("this is test for leaderboard");
-        Leaderboard.StartAddToLeaderboardCoroutine("test3", 0, 10);
+        // Leaderboard.StartAddToLeaderboardCoroutine("test3", 0, 10);
+        int[] myNum = {10, 20, 30, 40};
+        Debug.Log(~Array.BinarySearch(myNum, 35));
     }
 
     // Update is called once per frame

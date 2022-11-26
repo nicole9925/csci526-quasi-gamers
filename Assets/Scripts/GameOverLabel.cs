@@ -56,6 +56,7 @@ public class GameOverLabel : MonoBehaviour
         foreach  (PlayerRecord pr in result)
         {
             rankList.Add(pr.time);
+            // Debug.Log(pr.time);
         }
         
         float[] rank = rankList.ToArray();
@@ -63,14 +64,18 @@ public class GameOverLabel : MonoBehaviour
         // Debug.Log(result);
         for (int i = 0; i < Math.Min(Entries.Length-1, result.Length); i++)
         {
-            Entries[i].text = String.Format($"{result[i].username}: {result[i].time:F2}");
+            Entries[i].text = String.Format($"Rank{i+1}: {result[i].username} {result[i].time:F2}");
         }
         winLabel.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
         PlayerPrefs.SetInt("win", 1);
         PlayerPrefs.SetInt("lose", 0);
-        Debug.Log("Player Rank: " + Math.Abs(Array.BinarySearch(rank, PlayerPrefs.GetFloat("finishTime"))));
-        PlayerPrefs.SetInt("player_rank", Math.Abs(Array.BinarySearch(rank, PlayerPrefs.GetFloat("finishTime"))));
+
+        int idx = Array.BinarySearch(rank, PlayerPrefs.GetFloat("finishTime"));
+        // Debug.Log("idx" + idx);
+        // Debug.Log("~idx" + ~idx);
+        int _rank = idx >= 0 ? idx + 1 : ~idx;
+        Entries[Entries.Length-1].text = String.Format($"Rank{_rank}: {PlayerPrefs.GetString("name")}(You) {PlayerPrefs.GetFloat("finishTime"):F2}");
         analyticsData = 2;
     }
     
@@ -91,9 +96,6 @@ public class GameOverLabel : MonoBehaviour
             else
             {
                 Leaderboard.StartGetLeaderboardCoroutine(SceneManager.GetActiveScene().buildIndex - 3, SetEntries);
-                Debug.Log("FINISH TIME: " + PlayerPrefs.GetFloat("finishTime"));
-                Debug.Log("Player Rank here: " + PlayerPrefs.GetInt("player_rank"));
-                Entries[Entries.Length-1].text = String.Format($"{PlayerPrefs.GetString("name")}(You): {PlayerPrefs.GetFloat("finishTime"):F2}");
             }
             
             PlayerPrefs.SetInt("currentScene", currentScene);
