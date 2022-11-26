@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killed: 0
   deathSoundEffect: {fileID: 0}
+  materials: []
 --- !u!1 &3435364691986288331
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,9 +176,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.91908985, b: 0.98039216, a: 1}
-  m_Intensity: 1.8
-  m_Range: 0.28
+  m_Color: {r: 1, g: 0.05882353, b: 0, a: 1}
+  m_Intensity: 5.2
+  m_Range: 0.45
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -302,7 +303,7 @@ VisualEffect:
       m_Array: []
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0, y: 78.662865, z: 90.50967, w: 1}
+      - m_Value: {x: 90.5097, y: 8.52971, z: 0, w: 1}
         m_Name: Color
         m_Overridden: 1
     m_Uint:

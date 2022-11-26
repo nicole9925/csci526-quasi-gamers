@@ -620,7 +620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6698055495619752808, guid: 71510cdfbb6550847b280be63aed8515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6698055495619752808, guid: 71510cdfbb6550847b280be63aed8515, type: 3}
       propertyPath: m_LocalPosition.y
@@ -628,7 +628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6698055495619752808, guid: 71510cdfbb6550847b280be63aed8515, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.11
+      value: 11.29
       objectReference: {fileID: 0}
     - target: {fileID: 6698055495619752808, guid: 71510cdfbb6550847b280be63aed8515, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7552,6 +7552,22 @@ PrefabInstance:
     - target: {fileID: 3435364691986288333, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435364691986288333, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: m_Intensity
+      value: 5.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785147058718371592, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.x
+      value: 166.05357
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785147058718371592, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.y
+      value: 14.899783
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785147058718371592, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6e1900610c9472ea0006f87bcf6cfd, type: 3}
