@@ -60,11 +60,14 @@ public class GameOverLabel : MonoBehaviour
         }
         
         float[] rank = rankList.ToArray();
-        
-        // Debug.Log(result);
-        for (int i = 0; i < Math.Min(Entries.Length-1, result.Length); i++)
+        int j = 0;
+        Debug.Log(result);
+        for (int i = 0; i < Math.Min(Entries.Length/3,result.Length); i++)
         {
-            Entries[i].text = String.Format($"Rank{i+1}: {result[i].username} {result[i].time:F2}");
+            //Entries[i].text = String.Format($"Rank{i+1}: {result[i].username} {result[i].time:F2}");
+            Entries[j++].text = String.Format($"Rank{i+1}");
+            Entries[j++].text = String.Format($"{result[i].username}");
+            Entries[j++].text = String.Format($"{result[i].time:F2}");
         }
         winLabel.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
@@ -75,7 +78,10 @@ public class GameOverLabel : MonoBehaviour
         // Debug.Log("idx" + idx);
         // Debug.Log("~idx" + ~idx);
         int _rank = idx >= 0 ? idx + 1 : ~idx;
-        Entries[Entries.Length-1].text = String.Format($"Rank{_rank}: {PlayerPrefs.GetString("name")}(You) {PlayerPrefs.GetFloat("finishTime"):F2}");
+        Entries[Entries.Length-3].text = String.Format($"Rank{_rank}");
+        Entries[Entries.Length-2].text = String.Format($"{PlayerPrefs.GetString("name")}(You)");
+        Entries[Entries.Length-1].text = String.Format($"{PlayerPrefs.GetFloat("finishTime"):F2}");
+        //Entries[Entries.Length-1].text = String.Format($"Rank{_rank}: {PlayerPrefs.GetString("name")}(You) {PlayerPrefs.GetFloat("finishTime"):F2}");
         analyticsData = 2;
     }
     
