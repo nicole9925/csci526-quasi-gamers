@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource woodyDeathSound;
     public AudioSource wallBreakSound;
-    public AudioSource woodyJumpSound;
+    
 
     void Start()
     {
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         gameOverLabel = GameObject.Find("UI Canvas").gameObject.GetComponent<GameOverLabel>();
         woodyDeathSound = GameObject.FindGameObjectWithTag("WoodyDeathVoice").GetComponent<AudioSource>();
         wallBreakSound = GameObject.FindGameObjectWithTag("WallBreakVoice").GetComponent<AudioSource>();
-        woodyJumpSound = GameObject.FindGameObjectWithTag("JumpVoice").GetComponent<AudioSource>();
+        
     }
    
     void FixedUpdate()

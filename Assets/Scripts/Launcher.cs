@@ -12,10 +12,12 @@ public class Launcher : MonoBehaviour {
     public bool disablePlayerMovement = false;
     public float disableMovementDuration = 2.0f;
     private AnalyticsManager analytics;
+    public AudioSource woodyJumpSound;
 
     // Start is called before the first frame update
     void Start() {
         analytics = new AnalyticsManager();
+        woodyJumpSound = GameObject.FindGameObjectWithTag("JumpVoice").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class Launcher : MonoBehaviour {
         #if UNITY_WEBGL
             StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-3, 5));
         #endif
-
+        woodyJumpSound.Play();
         if (disablePlayerMovement)
         {
             if (otherObj.CompareTag("Player"))
