@@ -107,7 +107,7 @@ public class GameOverLabel : MonoBehaviour
             PlayerPrefs.SetInt("currentScene", currentScene);
             PlayerPrefs.SetInt("nextScene", nextScene);
 
-            int level = PlayerPrefs.GetInt("currentScene")-2;
+            int level = PlayerPrefs.GetInt("currentScene")-3;
             float dist = PlayerPrefs.GetFloat("distance");
             
             #if UNITY_WEBGL

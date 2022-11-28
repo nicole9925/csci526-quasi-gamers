@@ -36,7 +36,7 @@ public class Launcher : MonoBehaviour {
         
         rb.AddForce(launchDir.normalized * rb.mass * launchForce, forceMode);
         #if UNITY_WEBGL
-            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 5));
+            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-3, 5));
         #endif
 
         if (disablePlayerMovement)

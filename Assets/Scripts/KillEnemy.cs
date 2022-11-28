@@ -41,7 +41,7 @@ public class KillEnemy : MonoBehaviour
     public void ResetEnemy()
     {   
         #if UNITY_WEBGL
-            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 6));
+            StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-3, 6));
         #endif
         transform.position = spawnPos;
         Rigidbody rb = GetComponent<Rigidbody>();

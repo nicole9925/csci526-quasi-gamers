@@ -83,7 +83,7 @@ public class SceneOpener : MonoBehaviour
             break;
 
             case "ExitButton":
-            sendAnalytics(11, analyticsData);
+            //sendAnalytics(11, analyticsData);
             SceneManager.LoadScene("Scenes/woody/PlayGame");
             break;
 

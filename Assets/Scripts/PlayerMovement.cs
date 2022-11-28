@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Power Up!");
             #if UNITY_WEBGL
-                StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-2, 4));
+                StartCoroutine(analytics.GetRequests(PlayerPrefs.GetInt("currentScene")-3, 4));
             #endif
             changeWallColor();
             playerParticle.Play();
