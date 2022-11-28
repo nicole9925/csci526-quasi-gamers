@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Animator _animator;
 
+    public AudioSource woodyDeathSound;
+    public AudioSource wallBreakSound;
+    public AudioSource woodyJumpSound;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -53,8 +57,11 @@ public class PlayerMovement : MonoBehaviour
         analytics = new AnalyticsManager();
         _animator = GetComponentInChildren<Animator>();
         gameOverLabel = GameObject.Find("UI Canvas").gameObject.GetComponent<GameOverLabel>();
+        woodyDeathSound = GameObject.FindGameObjectWithTag("WoodyDeathVoice").GetComponent<AudioSource>();
+        wallBreakSound = GameObject.FindGameObjectWithTag("WallBreakVoice").GetComponent<AudioSource>();
+        woodyJumpSound = GameObject.FindGameObjectWithTag("JumpVoice").GetComponent<AudioSource>();
     }
-
+   
     void FixedUpdate()
     {
 
@@ -159,6 +166,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             gameOverLabel.showLabel();
+            woodyDeathSound.Play();
         }
 
         if (playerParticle != null && collision.gameObject.tag == "powerUp" && playerParticle.isPlaying == false)
@@ -176,6 +184,7 @@ public class PlayerMovement : MonoBehaviour
         {
             GameObject wall = collision.gameObject;
             Destroy(wall);
+            wallBreakSound.Play();
         }
     }
 
