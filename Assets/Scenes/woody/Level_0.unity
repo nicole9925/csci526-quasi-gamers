@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.066483736, g: 0.15934065, b: 0.20915899, a: 1}
+  m_IndirectSpecularColor: {r: 0.06637915, g: 0.1593214, b: 0.20912948, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -260,6 +261,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1001 &113734726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1363,7 +1365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2877102393321094564, guid: eee0accfd78c9462a823b1c171304e9b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -65.5
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2877102393390874439, guid: eee0accfd78c9462a823b1c171304e9b, type: 3}
       propertyPath: m_Pivot.x
