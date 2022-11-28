@@ -461,7 +461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
       propertyPath: launchForce
-      value: 15
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 2415852319675984076, guid: 3e879031df85d434b9b73b6b7e17070e, type: 3}
       propertyPath: neutralizeVelocity
@@ -1902,8 +1902,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 0, z: 20}
-  m_Center: {x: 0, y: 0.1, z: 0}
+  m_Size: {x: 20, y: 0.27538452, z: 20}
+  m_Center: {x: 0, y: -0.15395133, z: 0}
 --- !u!1 &504898606 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3124790928843693842, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
@@ -42530,9 +42530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbbe0303223f3943bf21a31117ae3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationRate: 10
+  rotationRate: 7.5
   relativeRotationScale: 0.01
-  rotationBounds: {x: 15, y: 0, z: 15}
+  rotationBounds: {x: 10, y: 0, z: 10}
   canRotate: 1
   positionRelativeRotation: 0
   rotationToApply: {x: 0, y: 0, z: 0}
