@@ -11,7 +11,7 @@ public class PlayVideo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Time.timeScale = 0.0f;
+        Time.timeScale = 0.0f;
         videoObj = GameObject.Find("PowerUpVideo");
         pauseButton = GameObject.Find("PauseButton");
         if(pauseButton.active){
@@ -28,7 +28,7 @@ public class PlayVideo : MonoBehaviour
 
     public void StartGame()
     {
-        // Time.timeScale = 1.0f;
+        Time.timeScale = 1.0f;
         videoObj.SetActive(false);
         gameObject.SetActive(false);
         pauseButton.SetActive(true);
