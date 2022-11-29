@@ -183,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
@@ -200,7 +199,6 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
 --- !u!1001 &38545880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4095,6 +4093,7 @@ GameObject:
   - component: {fileID: 935868401}
   - component: {fileID: 935868402}
   - component: {fileID: 935868403}
+  - component: {fileID: 935868404}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4236,6 +4235,23 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: fd9ff754a745e42f3a15356c94efdf9d, type: 2}
+--- !u!114 &935868404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935868397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 6422507dcf069450587046ed50031043, type: 2}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &939314972 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3124790929426356092, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}

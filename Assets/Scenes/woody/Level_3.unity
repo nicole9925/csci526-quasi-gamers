@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1937070014}
-  m_IndirectSpecularColor: {r: 0.066483736, g: 0.15934065, b: 0.20915899, a: 1}
+  m_IndirectSpecularColor: {r: 0.06637915, g: 0.1593214, b: 0.20912948, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -33081,6 +33081,7 @@ MonoBehaviour:
   neutralizeVelocity: 0
   disablePlayerMovement: 0
   disableMovementDuration: 2
+  woodyJumpSound: {fileID: 0}
 --- !u!135 &1383099540
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -54228,6 +54229,7 @@ MonoBehaviour:
   neutralizeVelocity: 0
   disablePlayerMovement: 0
   disableMovementDuration: 2
+  woodyJumpSound: {fileID: 0}
 --- !u!135 &1837360863
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -56289,6 +56291,7 @@ GameObject:
   - component: {fileID: 1942183490}
   - component: {fileID: 1942183493}
   - component: {fileID: 1942183494}
+  - component: {fileID: 1942183495}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -56412,6 +56415,23 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: fd9ff754a745e42f3a15356c94efdf9d, type: 2}
+--- !u!114 &1942183495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942183489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 6422507dcf069450587046ed50031043, type: 2}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1001 &1947654479
 PrefabInstance:
   m_ObjectHideFlags: 0
