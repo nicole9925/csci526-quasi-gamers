@@ -14,6 +14,7 @@ public class GameOverLabel : MonoBehaviour
     private Transform restartButton;
     private Transform menuButton;
     private Transform background;
+    private Transform pauseButton;
     private bool showingLabel = false;
     private int nextScene;
     private int currentScene;
@@ -30,6 +31,7 @@ public class GameOverLabel : MonoBehaviour
         restartButton = transform.Find("Restart");
         menuButton = transform.Find("Menu");
         background = transform.Find("GameOver").Find("Background");
+        pauseButton = transform.Find("PauseButton");
 
 
         loseLabel.gameObject.SetActive(false);
@@ -61,7 +63,7 @@ public class GameOverLabel : MonoBehaviour
         
         float[] rank = rankList.ToArray();
         int j = 0;
-        Debug.Log(result);
+        //Debug.Log(result);
         for (int i = 0; i < Math.Min(Entries.Length/3,result.Length); i++)
         {
             //Entries[i].text = String.Format($"Rank{i+1}: {result[i].username} {result[i].time:F2}");
@@ -91,9 +93,10 @@ public class GameOverLabel : MonoBehaviour
         {
 
             background.gameObject.SetActive(true);
+            pauseButton.gameObject.SetActive(false);
             if (!hasWon)
             {
-                loseLabel.gameObject.SetActive(true);
+                loseLabel.gameObject.SetActive(true); 
                 PlayerPrefs.SetInt("lose", 1);
                 PlayerPrefs.SetInt("win", 0);
                 analyticsData = 3;
