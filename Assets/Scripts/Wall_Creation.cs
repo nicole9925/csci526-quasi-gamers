@@ -68,7 +68,7 @@ public class Wall_Creation : MonoBehaviour {
 
     void CreateWall() {
         if (justExited.tag == "groundTile") {
-            justExited.transform.localScale = new Vector3(1, 1.5f, 1);
+            justExited.transform.localScale = new Vector3(1.5f, 2.5f, 1.5f);
             justExited.transform.position = justExited.transform.position + new Vector3(0, 0.5f, 0);
             justExited.GetComponent<MeshRenderer>().material = wallMat;
             justExited.tag = "wall";

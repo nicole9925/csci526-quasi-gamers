@@ -47,14 +47,14 @@ public class TilemapScript : MonoBehaviour
         tilemap = GetComponent<Tilemap>();
         tm_Min = tilemap.GetComponent<Collider>().bounds.min;
         tm_Max = tilemap.GetComponent<Collider>().bounds.max;
-        Debug.Log(tm_Min);
 
         //numOfTilesToDestroy = 1;
         walkableLayer = LayerMask.NameToLayer("walkable");
 
         GetDestructibleTiles(transform, destructibleTiles);
-
-        timer = GameObject.Find("tileBomb").GetComponent<tileBomb>();
+        
+        if(GameObject.Find("tileBomb"))
+        { timer = GameObject.Find("tileBomb").GetComponent<tileBomb>();}
 
         waitTime = Random.Range(minWait, maxWait);
     }

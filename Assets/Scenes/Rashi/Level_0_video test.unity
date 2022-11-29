@@ -571,11 +571,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &104159555 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3124790929855837663, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
-  m_PrefabInstance: {fileID: 3124790928677274527}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &113734726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7313,22 +7308,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3124790929855837662, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
   m_PrefabInstance: {fileID: 3124790928677274527}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1892490194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104159555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fbea31abf4ae41ebbcc18874dd2e320, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 0}
-  numOfTilesToDestroy: 2
-  minWait: 0
-  maxWait: 0
 --- !u!1001 &1894521872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9912,5 +9891,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2888486718396395221, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd2932435fb3e4b658e1d91b635ce484, type: 3}
