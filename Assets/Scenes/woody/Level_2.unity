@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2069630487}
-  m_IndirectSpecularColor: {r: 0.066483736, g: 0.15934065, b: 0.20915899, a: 1}
+  m_IndirectSpecularColor: {r: 0.066466756, g: 0.15931815, b: 0.20913494, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17811,6 +17811,10 @@ PrefabInstance:
     - target: {fileID: 2877102393390874458, guid: eee0accfd78c9462a823b1c171304e9b, type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618984450744382509, guid: eee0accfd78c9462a823b1c171304e9b, type: 3}
+      propertyPath: m_text
+      value: Top 5 Players
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eee0accfd78c9462a823b1c171304e9b, type: 3}

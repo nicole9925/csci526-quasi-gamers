@@ -50,4 +50,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/woody/Level_11.unity
     guid: 245102b771bd4441fb55092e9d53cfc8
+  - enabled: 1
+    path: Assets/Scenes/PowerUp_Video_Scenes/Level_1_ShiftSpeed 1.unity
+    guid: 186d921665136482bb0741eaac97e0dc
+  - enabled: 1
+    path: Assets/Scenes/PowerUp_Video_Scenes/Level_1_tileBomb.unity
+    guid: 23b3f68e735c641538a7028a45e24caf
+  - enabled: 1
+    path: Assets/Scenes/PowerUp_Video_Scenes/Level_2_LaunchPad.unity
+    guid: e92362e42fa7d4ba88afddbab74bdb2f
+  - enabled: 1
+    path: Assets/Scenes/PowerUp_Video_Scenes/Level_2_WallBreak 1.unity
+    guid: f8794fba48ce0444589d71a1939df9bf
+  - enabled: 1
+    path: Assets/Scenes/PowerUp_Video_Scenes/Level_4_Hammer.unity
+    guid: ae1bab47eeced4685b90f2e7844d5f60
+  - enabled: 1
+    path: Assets/Scenes/PowerUp_Video_Scenes/Level_6_Cannon.unity
+    guid: 87a4b56cba1694f4aa8e48afb19d7cf0
+  - enabled: 1
+    path: Assets/Scenes/PowerUp_Video_Scenes/Level_10_CreateWalls.unity
+    guid: ab07c710128bb4502be54875f225b6a6
   m_configObjects: {}
