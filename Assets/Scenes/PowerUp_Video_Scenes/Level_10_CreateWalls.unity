@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.54901963, g: 0.54901963, b: 0.54901963, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 1de2373755dc242e7a01b6f593ac162c, type: 2}
   m_HaloStrength: 0.5
@@ -22071,6 +22071,8 @@ MonoBehaviour:
     m_Bits: 9
   groundedDistance: 0.1
   rotationSpeed: 720
+  woodyDeathSound: {fileID: 0}
+  wallBreakSound: {fileID: 0}
 --- !u!114 &1609361228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22177,7 +22179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd39775acea484382ab7b81b26ea4399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallMat: {fileID: 2100000, guid: 13354e90e81fd4d1d94d4416c11387cf, type: 2}
+  wallMat: {fileID: 2100000, guid: c70101935bbca4e3c8fdd74a157cddec, type: 2}
   justExitedMaterial: {fileID: 2100000, guid: 0f6f6450ab46e44109aa3a34b08156e8, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 6dc478fb39e2d47e9b65cefe5dd3b82c, type: 2}
   firstExited: {fileID: 1276450314}
@@ -25447,6 +25449,10 @@ PrefabInstance:
     - target: {fileID: 2877102393390874458, guid: eee0accfd78c9462a823b1c171304e9b, type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877102393390874458, guid: eee0accfd78c9462a823b1c171304e9b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2877102394143240626, guid: eee0accfd78c9462a823b1c171304e9b, type: 3}
       propertyPath: m_IsActive
