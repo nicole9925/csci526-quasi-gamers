@@ -9,7 +9,7 @@ public class vp1 : MonoBehaviour
 {
     public GameObject videoPlayer;
 
-    public string videoname;
+    // public string videoname;
 
     public string url;
     // Start is called before the first frame update
@@ -35,10 +35,10 @@ public class vp1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey)
-        {
-            Play();
-        }
+        // if (Input.anyKey)
+        // {
+        //     Play();
+        // }
        
     }
     

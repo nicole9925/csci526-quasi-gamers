@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2069630487}
-  m_IndirectSpecularColor: {r: 0.066466756, g: 0.15931815, b: 0.20913494, a: 1}
+  m_IndirectSpecularColor: {r: 0.066483736, g: 0.15934065, b: 0.20915899, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7320,7 +7320,7 @@ VideoPlayer:
   m_AudioOutputMode: 2
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
-  m_Url: 
+  m_Url: https://csci526-quasi-gamers.wl.r.appspot.com/video/breakWallsmp4
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
@@ -7352,14 +7352,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839066392}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 148a9b8d4728c3a4383f035226c93e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 839066392}
-  videoname: breakWallsmp4.mp4
-  url: https://streamable.com/l/sco3x9/mp4.mp4
+  url: https://csci526-quasi-gamers.wl.r.appspot.com/video/breakWallsmp4
 --- !u!1 &870891112
 GameObject:
   m_ObjectHideFlags: 0
@@ -17894,7 +17893,7 @@ VideoPlayer:
   m_AudioOutputMode: 0
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
-  m_Url: 
+  m_Url: https://csci526-quasi-gamers.wl.r.appspot.com/video/launchpadmp4
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
@@ -17926,14 +17925,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226595267}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 148a9b8d4728c3a4383f035226c93e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1226595267}
-  videoname: launchpadmp4.mp4
-  url: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
+  url: https://csci526-quasi-gamers.wl.r.appspot.com/video/launchpadmp4
 --- !u!1 &1239479968
 GameObject:
   m_ObjectHideFlags: 0
